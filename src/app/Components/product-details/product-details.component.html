@@ -1,0 +1,47 @@
+<div class="d-flex">
+
+    <div>
+        <img src="{{clickedImage}}" alt="clickedProductImage" class="img-fluid">
+        <ul class="d-flex  list-unstyled">
+                @for (image of product.images; track $index) {
+                    <li class="p-2"><img src="{{image}}" alt="productImage" class="img-fluid" (click)="changeImage(image)"></li>
+                }
+        </ul>
+    </div>
+    
+    <div>
+        <h1>{{product.name}}</h1>
+        <p>{{product.price}}</p>
+        <div>
+            <span>Size</span>
+            <div>
+
+                @for (size of product.availableSizes; track $index) {
+                    <button class="btn btn-outline-dark m-1 rounded-pill ">{{size}}</button>
+                }
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <label for="">Quantity</label>
+            <div class="quantity">
+                <input type="button" value="-" (click)="decrease()">
+                <span>{{desiredQuantity()}}</span>
+                <input type="button" value="+" (click)="increase()"> 
+            </div>
+        </div>
+        <div>
+            <button>Add to cart</button>
+            <button>Buy it now</button>
+        </div>
+
+        <div>
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <!-- You may also like component-->
+
+</div>

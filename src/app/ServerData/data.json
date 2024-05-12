@@ -1,0 +1,20 @@
+{
+    "collections": [
+        {
+            "name": "Linen Dresses",
+            "products": [
+                {
+                    "name": "Black Linen Dress",
+                    "price": 850,
+                    "availableSizes": [
+                        "s/m",
+                        "l/xl"
+                    ],
+                    "availableQuantaties": 5,
+                    "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+                    "images": ["assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
+                }
+            ]
+        }
+    ]
+}
