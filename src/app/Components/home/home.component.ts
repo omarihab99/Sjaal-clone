@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../../Services/category.service';
+import { Category } from '../../Models/category.model';
+import { CategorySectionComponent } from '../category-section/category-section.component';
+@Component({
+  selector: 'app-home',
+  standalone: true,
+  imports: [CategorySectionComponent],
+  providers:[CategoryService],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
+})
+export class HomeComponent implements OnInit {
+  categories!: Category[];
+  constructor(private categoryService: CategoryService) { }
+  ngOnInit(): void {
+    this.categoryService.getCategories().subscribe(
+      (categories) => {
+        this.categories = categories;
+      }
+    )
+  }
+
+}
