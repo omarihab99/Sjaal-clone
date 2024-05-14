@@ -1,47 +1,73 @@
-<div class="d-flex">
+<div class="d-flex justify-content-between container all">
+    <div class="row">
 
-    <div>
-        <img src="{{clickedImage}}" alt="clickedProductImage" class="img-fluid">
-        <ul class="d-flex  list-unstyled">
-                @for (image of product.images; track $index) {
-                    <li class="p-2"><img src="{{image}}" alt="productImage" class="img-fluid" (click)="changeImage(image)"></li>
-                }
-        </ul>
-    </div>
-    
-    <div>
-        <h1>{{product.name}}</h1>
-        <p>{{product.price}}</p>
-        <div>
-            <span>Size</span>
+        <div class=" col-lg-6 left-section">
+            <div class="clickedImageDiv">
+                <img src="{{clickedImage}}" alt="clickedProductImage" class="img-fluid" id="clickedImage">
+            </div>
+
+            <div style="height: 30%;">
+                <ul class="list-unstyled">
+                    @for (image of product.images; track $index) {
+                    <li [ngClass]="{'selected': clickedImage === image}">
+                        <img src="{{image}}" alt="productImage" (click)="changeImage(image)">
+
+
+                    </li>
+                    }
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 right-section">
+            <!-- <p>SJAAL</p> -->
+            <h1>{{product.name}}</h1>
+            <p>{{product.price | customCurrency:"EGP"}}</p>
             <div>
-
-                @for (size of product.availableSizes; track $index) {
-                    <button class="btn btn-outline-dark m-1 rounded-pill ">{{size}}</button>
-                }
+                <label>Size</label>
+                <div>
+                    @for (size of product.availableSizes; track $index) {
+                    <button class="btn btn-outline-dark m-1 rounded-pill" [ngClass]="{'btn-dark': choosenSize === size}"
+                        (click)="chooseSize(size)">{{size}}</button>
+                    }
+                </div>
             </div>
-        </div>
 
-        <div class="d-flex">
-            <label for="">Quantity</label>
-            <div class="quantity">
-                <input type="button" value="-" (click)="decrease()">
-                <span>{{desiredQuantity()}}</span>
-                <input type="button" value="+" (click)="increase()"> 
+            <div>
+                <label for="">Quantity</label>
+                <div class="quantity">
+                    @if (desiredQuantity()>0) {
+                    <input type="button" value="-" (click)="decrease()">
+                    }
+                    <span>{{desiredQuantity()}}</span>
+                    <input type="button" value="+" (click)="increase()">
+                </div>
             </div>
-        </div>
-        <div>
-            <button>Add to cart</button>
-            <button>Buy it now</button>
-        </div>
 
-        <div>
-            <p>{{product.description}}</p>
+            <div class="buttons d-flex">
+                <button (click)="addToCart()" type="button" class="btn" id="addToCart">Add to cart</button>
+                <button type="button" class="btn" id="buyItNow">Buy it now</button>
+            </div>
+            <div>
+                <p>{{product.description}}</p>
+            </div>
+            <div class="d-flex">
+                <i class="bi bi-upload m-1"></i>
+
+                <span class="m-1">Share</span>
+            </div>
+            <div class="feedback">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
         </div>
     </div>
 </div>
 
 <div>
     <!-- You may also like component-->
-
 </div>
