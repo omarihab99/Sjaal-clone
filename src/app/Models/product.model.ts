@@ -1,6 +1,6 @@
 export class Product{
     id:string="";
-    categoryId:number=0;
+    categoryId:string="";
     name: string="";
     price: number=0;
     availableSizes: string[]=[];

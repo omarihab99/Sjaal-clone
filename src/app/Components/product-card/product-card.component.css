@@ -11,13 +11,13 @@ a:hover{
 }
 
 #productImg{
-    background-image: url('../../../assets/images/TealLinenDress.webp');
+    /* background-image: url('../../../assets/images/TealLinenDress.webp'); */
     background-size: cover;
     transition: 0.8s ease-out;
 }
 
 #productImg:hover{
-    background-image: url('../../../assets/images/TealLinenDress2.webp');
+    /* background-image: url('../../../assets/images/TealLinenDress2.webp'); */
     background-size: 85%;
     
 }

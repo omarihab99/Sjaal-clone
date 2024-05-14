@@ -6,11 +6,13 @@ import { CartProduct } from '../../Models/cart-product.model';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CustomCurrencyPipe } from '../../Pipes/custom-currency.pipe';
+import { ProductCardComponent } from '../product-card/product-card.component';
+import { RecommendationComponent } from '../recommendation/recommendation.component';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule],
+  imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule, RecommendationComponent],
   providers: [CartService],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
@@ -19,7 +21,7 @@ export class ProductDetailsComponent implements OnInit {
   cartProduct: CartProduct = {};
   product: Product = {
     id: "1",
-    categoryId: 1,
+    categoryId: "1",
     name: "Black Linen Dress",
     price: 850,
     availableSizes: [

@@ -103,6 +103,14 @@ label{
     color: white !important;
 }
 
+.youMayAlsoLike{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    height: 100%;
+    padding: 1rem;
+
+}
 
 @media (max-width: 767.98px) {
     .all{
@@ -116,6 +124,11 @@ label{
       display: block; 
       margin-top: 20px; 
       margin: auto;
+    }
+
+    .youMayAlsoLike{
+        grid-template-columns: repeat(2, 1fr);
+
     }
     
 }
