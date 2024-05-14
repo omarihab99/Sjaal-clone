@@ -1,0 +1,44 @@
+.btn-close {
+  position: absolute;
+  top: 10px;
+}
+.tabs-container {
+  position: relative;
+  margin-top: 30px;
+}
+.tabs-container button {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  background: none;
+}
+
+.tabs-container button:hover {
+  background-color: rgb(200, 193, 193);
+}
+.icon {
+  position: absolute;
+  right: 5px;
+}
+#divCategoriesTabs, #divCollectionsTabs, #divHomeTabs {
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    /* transform: translateX(30px); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(0px); */
+  }
+}
+/* @keyframes fadeout {
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(30px);
+  }
+} */
+
