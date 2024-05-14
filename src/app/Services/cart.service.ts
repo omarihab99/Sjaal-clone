@@ -19,5 +19,9 @@ export class CartService {
     return this.http.put(`${this.URL}/${cartProduct.id}`, cartProduct);
   }
 
+  getCartProducts(){
+    return this.http.get(this.URL)
+  }
+
 
 }
