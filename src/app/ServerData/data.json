@@ -2,6 +2,7 @@
     "collections": [
         {
             "name": "Linen Dresses",
+            "desc": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
             "products": [
                 {
                     "name": "Black Linen Dress",
@@ -12,7 +13,62 @@
                     ],
                     "availableQuantaties": 5,
                     "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-                    "images": ["assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
+                    "images": ["/assets/images/BlackLinenDress.webp", "/assets/images/BlackLinenDress2.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
+                },
+                {
+                    "name": "Teal Linen Dress",
+                    "price": 850,
+                    "availableSizes": [
+                        "s/m",
+                        "l/xl"
+                    ],
+                    "availableQuantaties": 5,
+                    "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+                    "images": ["/assets/images/TealLinenDress.webp", "/assets/images/TealLinenDress2.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
+                },
+                {
+                    "name": "Olive Linen Dress",
+                    "price": 850,
+                    "availableSizes": [
+                        "s/m",
+                        "l/xl"
+                    ],
+                    "availableQuantaties": 5,
+                    "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+                    "images": ["/assets/images/oliveLinenDress.webp", "/assets/images/oliveLinenDress2.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
+                },
+                {
+                    "name": "Mint Linen Dress",
+                    "price": 850,
+                    "availableSizes": [
+                        "s/m",
+                        "l/xl"
+                    ],
+                    "availableQuantaties": 5,
+                    "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+                    "images": ["/assets/images/mintdress.webp", "/assets/images/mintdress2.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
+                },
+                {
+                    "name": "Cashmere Linen Dress",
+                    "price": 850,
+                    "availableSizes": [
+                        "s/m",
+                        "l/xl"
+                    ],
+                    "availableQuantaties": 5,
+                    "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+                    "images": ["/assets/images/cashmere.webp", "/assets/images/cashmere2.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
+                },
+                {
+                    "name": "Beige Linen Dress",
+                    "price": 850,
+                    "availableSizes": [
+                        "s/m",
+                        "l/xl"
+                    ],
+                    "availableQuantaties": 5,
+                    "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+                    "images": ["/assets/images/beige.webp", "/assets/images/beige2.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
                 }
             ]
         }
