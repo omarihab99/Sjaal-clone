@@ -12,13 +12,14 @@ import { Product } from '../../Models/product.model';
   styleUrl: './recommendation.component.css'
 })
 export class RecommendationComponent implements OnInit{
-  @Input() categoryId:string=""
+  categoryId:any;
   products: Product[]=[]
 
   constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
     console.log(this.categoryId);
+    this.categoryId = localStorage.getItem("categoryId");
     
     this.productsService.getCategoryProduct(this.categoryId).subscribe({
       next:(data:any)=>{

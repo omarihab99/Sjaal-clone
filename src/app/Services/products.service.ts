@@ -12,4 +12,8 @@ export class ProductsService {
     return this.http.get(this.URL+`?categoryId=${categoryId}`)
 
   }
+
+  getProductById(productId:string){
+    return this.http.get(this.URL+"/"+productId);
+  }
 }
