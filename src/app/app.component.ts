@@ -11,7 +11,12 @@ import { FooterComponent } from './Components/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainsectionComponent, SidebarComponent, CategorySectionComponent, HomeComponent,ProductDetailsComponent,HeaderComponent,FeedbackComponent,FooterComponent],
+  imports: [
+    RouterOutlet,
+    MainsectionComponent, SidebarComponent, CategorySectionComponent, HomeComponent, ProductDetailsComponent, HeaderComponent,
+    
+  
+  FeedbackComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

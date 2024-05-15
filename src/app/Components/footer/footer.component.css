@@ -1,4 +1,4 @@
-input:focus {
-    border: none;
-    outline: none;
-  }
+.footer{
+    border-top: 0.1px solid gray;
+    width: 100%;
+}
