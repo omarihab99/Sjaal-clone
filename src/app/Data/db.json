@@ -21,6 +21,7 @@
       "name": "Summer Collection"
     }
   ],
+
   "collections": [
     {
       "id": "1",
@@ -29,14 +30,15 @@
     },
     {
       "id": "2",
-      "name": "Abaya Dresses",
+      "name": "Buttoned Linen Sets",
       "categoryId": "1"
     },
     {
       "id": "3",
-      "name": "Buttoned Linen Sets",
+      "name": "Abaya Dresses",
       "categoryId": "1"
     },
+
     {
       "id": "4",
       "name": "Plush Cotton Scarves",
@@ -107,11 +109,12 @@
       "categoryId": "5"
     }
   ],
+
   "products": [
 
     {
       "id": "1",
-      "categoryId": "1",
+      "collectionId": "1",
       "name": "Black Linen Dress",
       "price": 850,
       "availableSizes": [
@@ -130,7 +133,7 @@
     },
     {
       "id": "2",
-      "categoryId": "1",
+      "collectionId": "1",
       "name": "Teal Linen Dress",
       "price": 850,
       "availableSizes": [
@@ -149,7 +152,7 @@
     },
     {
       "id": "3",
-      "categoryId": "1",
+      "collectionId": "1",
       "name": "Olive Linen Dress",
       "price": 850,
       "availableSizes": [
@@ -168,7 +171,7 @@
     },
     {
       "id": "4",
-      "categoryId": "1",
+      "collectionId": "1",
       "name": "Cashmere Linen Dress",
       "price": 850,
       "availableSizes": [
@@ -188,7 +191,7 @@
 
     {
       "id": "5",
-      "categoryId": "1",
+      "collectionId": "2",
       "name": "Olive Buttoned Linen Set",
       "price": 1000,
       "availableSizes": [
@@ -207,7 +210,7 @@
     },
     {
       "id": "6",
-      "categoryId": "1",
+      "collectionId": "2",
       "name": "Black Buttoned Linen Set",
       "price": 1000,
       "availableSizes": [
@@ -225,7 +228,7 @@
     },
     {
       "id": "7",
-      "categoryId": "1",
+      "collectionId": "2",
       "name": "Cream Buttoned Linen Set",
       "price": 1000,
       "availableSizes": [
@@ -244,7 +247,7 @@
     },
     {
       "id": "8",
-      "categoryId": "1",
+      "collectionId": "2",
       "name": "Beige Buttoned Linen Set",
       "price": 1000,
       "availableSizes": [
@@ -264,7 +267,7 @@
 
     {    
       "id": "9",
-      "categoryId": "2",
+      "collectionId": "3",
       "name": "Black Abaya Dress",
       "price": 700,
       "availableSizes": [
@@ -283,7 +286,7 @@
     }, 
     {    
       "id": "10",
-      "categoryId": "2",
+      "collectionId": "3",
       "name": "Mint Abaya Dress",
       "price": 700,
       "availableSizes": [
@@ -302,7 +305,7 @@
     }, 
     {    
       "id": "11",
-      "categoryId": "2",
+      "collectionId": "3",
       "name": "Beige Abaya Dress",
       "price": 700,
       "availableSizes": [
@@ -321,7 +324,7 @@
     }, 
     {    
       "id": "12",
-      "categoryId": "2",
+      "collectionId": "3",
       "name": "Blush Abaya Dress",
       "price": 700,
       "availableSizes": [
@@ -341,7 +344,7 @@
 
     {    
       "id": "13",
-      "categoryId": "2",
+      "collectionId": "4",
       "name": "Black Plush",
       "price": 300,
       "availableSizes": [
@@ -360,7 +363,7 @@
     },
     {    
       "id": "14",
-      "categoryId": "2",
+      "collectionId": "4",
       "name": "Cafe Plush",
       "price": 300,
       "availableSizes": [
@@ -376,7 +379,7 @@
     }, 
     {    
       "id": "15",
-      "categoryId": "2",
+      "collectionId": "4",
       "name": "Chocolate Plush",
       "price": 300,
       "availableSizes": [
@@ -393,7 +396,7 @@
     },
     {    
       "id": "16",
-      "categoryId": "2",
+      "collectionId": "4",
       "name": "Jade Plush",
       "price": 300,
       "availableSizes": [
@@ -413,7 +416,7 @@
 
     {    
       "id": "17",
-      "categoryId": "2",
+      "collectionId": "5",
       "name": "Black Grace",
       "price": 250,
       "availableSizes": [
@@ -432,7 +435,7 @@
     },
     {    
       "id": "18",
-      "categoryId": "2",
+      "collectionId": "4",
       "name": "Dark Blue Grace",
       "price": 250,
       "availableSizes": [
@@ -451,7 +454,7 @@
     },    
     {    
       "id": "19",
-      "categoryId": "2",
+      "collectionId": "4",
       "name": "Maroon Grace",
       "price": 250,
       "availableSizes": [
@@ -469,7 +472,7 @@
     },    
     {    
       "id": "20",
-      "categoryId": "2",
+      "collectionId": "4",
       "name": "Oakwood Grace",
       "price": 250,
       "availableSizes": [
@@ -489,7 +492,7 @@
 
     {    
       "id": "21",
-      "categoryId": "3",
+      "collectionId": "11",
       "name": "Sleeved Olive Prayer Set",
       "price": 650,
       "availableSizes": [
@@ -507,7 +510,7 @@
     },
     {    
       "id": "22",
-      "categoryId": "3",
+      "collectionId": "11",
       "name": "Sleeved Cream Prayer Set",
       "price": 650,
       "availableSizes": [
@@ -525,7 +528,7 @@
     },
     {    
       "id": "23",
-      "categoryId": "3",
+      "collectionId": "11",
       "name": "Sleeved Mint Prayer Set",
       "price": 650,
       "availableSizes": [
@@ -543,7 +546,7 @@
     },
     {    
       "id": "24",
-      "categoryId": "3",
+      "collectionId": "11",
       "name": "Sleeved Violet Prayer Set",
       "price": 650,
       "availableSizes": [
@@ -562,7 +565,7 @@
 
     {    
       "id": "25",
-      "categoryId": "3",
+      "collectionId": "12",
       "name": "Non-Sleeved Cream Prayer Set",
       "price": 550,
       "availableSizes": [
@@ -580,7 +583,7 @@
     },
     {    
       "id": "26",
-      "categoryId": "3",
+      "collectionId": "12",
       "name": "Non-Sleeved Violet Prayer Set",
       "price": 550,
       "availableSizes": [
@@ -599,7 +602,7 @@
     },    
     {    
       "id": "27",
-      "categoryId": "3",
+      "collectionId": "12",
       "name": "Non-Sleeved Olive Prayer Set",
       "price": 550,
       "availableSizes": [
@@ -617,7 +620,7 @@
 
     {    
       "id": "28",
-      "categoryId": "4",
+      "collectionId": "14",
       "name": "Camel Wool Scarf",
       "price": 350,
       "availableSizes": [
@@ -636,7 +639,7 @@
     },
     {    
       "id": "29",
-      "categoryId": "4",
+      "collectionId": "14",
       "name": "Grey Wool Scarf",
       "price": 350,
       "availableSizes": [
@@ -653,7 +656,7 @@
     },    
     {    
       "id": "30",
-      "categoryId": "4",
+      "collectionId": "14",
       "name": "Cream Wool Scarf",
       "price": 350,
       "availableSizes": [
@@ -668,7 +671,7 @@
     },    
     {    
       "id": "31",
-      "categoryId": "4",
+      "collectionId": "14",
       "name": "Black Wool Scarf",
       "price": 350,
       "availableSizes": [
@@ -684,7 +687,7 @@
 
     {    
       "id": "32",
-      "categoryId": "4",
+      "collectionId": "15",
       "name": "Olive Pullover",
       "price": 550,
       "availableSizes": [
@@ -701,7 +704,7 @@
     },    
     {    
       "id": "33",
-      "categoryId": "4",
+      "collectionId": "15",
       "name": "Black Pullover",
       "price": 550,
       "availableSizes": [
@@ -720,7 +723,7 @@
     },
     {    
       "id": "34",
-      "categoryId": "4",
+      "collectionId": "15",
       "name": "Burgundy Pullover",
       "price": 350,
       "availableSizes": [
@@ -738,7 +741,7 @@
     },
     {    
       "id": "35",
-      "categoryId": "4",
+      "collectionId": "15",
       "name": "Beige Pullover",
       "price": 350,
       "availableSizes": [
@@ -757,7 +760,7 @@
 
     {    
       "id": "36",
-      "categoryId": "5",
+      "categoryId": "16",
       "name": "Hawaii",
       "price": 200,
       "availableSizes": [
@@ -772,7 +775,7 @@
     },    
     {    
       "id": "37",
-      "categoryId": "5",
+      "categoryId": "16",
       "name": "Kiwi",
       "price": 200,
       "availableSizes": [
@@ -789,7 +792,7 @@
     },
     {    
       "id": "38",
-      "categoryId": "5",
+      "categoryId": "16",
       "name": "Popsicle",
       "price": 200,
       "availableSizes": [
@@ -807,7 +810,7 @@
 
     {    
       "id": "39",
-      "categoryId": "5",
+      "collectionId": "17",
       "name": "Bahamas",
       "price": 200,
       "availableSizes": [
@@ -824,7 +827,7 @@
     },  
     {    
       "id": "40",
-      "categoryId": "5",
+      "collectionId": "17",
       "name": "Maldives",
       "price": 200,
       "availableSizes": [
@@ -841,7 +844,7 @@
     },  
     {    
       "id": "41",
-      "categoryId": "5",
+      "collectionId": "17",
       "name": "Malibu",
       "price": 200,
       "availableSizes": [
