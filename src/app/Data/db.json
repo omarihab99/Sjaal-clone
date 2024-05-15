@@ -1,232 +1,134 @@
 {
-  "category": [
-    {
-      "id": "1",
-      "name": "Modest Wear"
-    },
-    {
-      "id": "2",
-      "name": "Scarves"
-    },
-    {
-      "id": "3",
-      "name": "Prayer Wear"
-    },
-    {
-      "id": "4",
-      "name": "Winter Collection"
-    },
-    {
-      "id": "5",
-      "name": "Summer Collection"
-    }
-  ],
-  "collections": [
-    {
-      "id": "1",
-      "name": "Linen Dresses",
-      "categoryId": "1"
-    },
-    {
-      "id": "2",
-      "name": "Abaya Dresses",
-      "categoryId": "1"
-    },
-    {
-      "id": "3",
-      "name": "Buttoned Linen Sets",
-      "categoryId": "1"
-    },
-    {
-      "id": "4",
-      "name": "Plush Cotton Scarves",
-      "categoryId": "2"
-    },
-    {
-      "id": "5",
-      "name": "Classic Grace Cotton Scarves",
-      "categoryId": "2"
-    },
-    {
-      "id": "6",
-      "name": "Thin Grace Cotton Scarves",
-      "categoryId": "2"
-    },
-    {
-      "id": "7",
-      "name": "Delicate Cotton Scarves",
-      "categoryId": "2"
-    },
-    {
-      "id": "8",
-      "name": "Charm Cotton Scarves",
-      "categoryId": "2"
-    },
-    {
-      "id": "9",
-      "name": "Satin Scarves",
-      "categoryId": "2"
-    },
-    {
-      "id": "10",
-      "name": "Printed Chiffon Scarves"
-    },
-    {
-      "id": "11",
-      "name": "Sleeved Prayer Sets",
-      "categoryId": "3"
-    },
-    {
-      "id": "12",
-      "name": "Non-Sleeved Prayer Sets",
-      "categoryId": "3"
-    },
-    {
-      "id": "13",
-      "name": "Prayer Isdals",
-      "categoryId": "3"
-    },
-    {
-      "id": "14",
-      "name": "Wool Scarves",
-      "categoryId": "4"
-    },
-    {
-      "id": "15",
-      "name": "Pullovers",
-      "categoryId": "4"
-    },
-    {
-      "id": "16",
-      "name": "Chiffon Coverups",
-      "categoryId": "5"
-    },
-    {
-      "id": "17",
-      "name": "Satin Coverups",
-      "categoryId": "5"
-    }
-  ],
-  "products": [
-    {
-      "id": "1",
-      "categoryId": "1",
-      "name": "Black Linen Dress",
-      "price": 850,
-      "availableSizes": [
-        "S/M",
-        "L/XL"
-      ],
-      "availableQuantaties": 5,
-      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-      "images": [
-        "../assets/images/TealLinenDress.webp",
-        "../assets/images/20230515-152828 (1).jpg",
-        "../assets/images/BlackLinenDress.webp"
-      ]
-    },
-    {
-      "id": "1",
-      "categoryId": "1",
-      "name": "Black Linen Dress",
-      "price": 850,
-      "availableSizes": [
-        "S/M",
-        "L/XL"
-      ],
-      "availableQuantaties": 5,
-      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-      "images": [
-        "../assets/images/TealLinenDress.webp",
-        "../assets/images/20230515-152828 (1).jpg",
-        "../assets/images/BlackLinenDress.webp"
-      ]
-    },{
-      "id": "1",
-      "categoryId": "1",
-      "name": "Black Linen Dress",
-      "price": 850,
-      "availableSizes": [
-        "S/M",
-        "L/XL"
-      ],
-      "availableQuantaties": 5,
-      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-      "images": [
-        "../assets/images/TealLinenDress.webp",
-        "../assets/images/20230515-152828 (1).jpg",
-        "../assets/images/BlackLinenDress.webp"
-      ]
-    },{
-      "id": "1",
-      "categoryId": "1",
-      "name": "Black Linen Dress",
-      "price": 850,
-      "availableSizes": [
-        "S/M",
-        "L/XL"
-      ],
-      "availableQuantaties": 5,
-      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-      "images": [
-        "../assets/images/TealLinenDress.webp",
-        "../assets/images/20230515-152828 (1).jpg",
-        "../assets/images/BlackLinenDress.webp"
-      ]
-    },{
-      "id": "1",
-      "categoryId": "1",
-      "name": "Black Linen Dress",
-      "price": 850,
-      "availableSizes": [
-        "S/M",
-        "L/XL"
-      ],
-      "availableQuantaties": 5,
-      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-      "images": [
-        "../assets/images/TealLinenDress.webp",
-        "../assets/images/BlackLinenDress.webp",
-        "../assets/images/20230515-152828 (1).jpg"
-      ]
-    },
-    {
-      "id": "1",
-      "categoryId": 3,
-      "name": "Black Linen Dress",
-      "price": 850,
-      "availableSizes": [
-        "S/M",
-        "L/XL"
-      ],
-      "availableQuantaties": 5,
-      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-      "images": [
-        "../assets/images/BlackLinenDress.webp",
-        "../assets/images/BlackLinenDress2.webp",
-        "../assets/images/BlackLinenDress.webp",
-        "../assets/images/BlackLinenDress.webp"
-      ]
-    }
-  ],
-  "cart": [
-    {
-      "id": "1",
-      "categoryId": 1,
-      "name": "Black Linen Dress",
-      "price": 850,
-      "size": "S/M",
-      "quantity": 3,
-      "image": "assets/images/BlackLinenDress.webp"
-    },
-    {
-      "id": "1",
-      "categoryId": 1,
-      "name": "Black Linen Dress",
-      "price": 850,
-      "size": "L/XL",
-      "quantity": 2,
-      "image": "assets/images/BlackLinenDress.webp"
-    }
-  ]
+    "category":[
+        {
+            "id": "1",
+            "name": "Modest Wear"
+        },
+        {
+            "id": "2",
+            "name": "Scarves"
+        },
+        {
+            "id": "3",
+            "name": "Prayer Wear"
+        },
+        {
+            "id":"4",
+            "name":"Winter Collection"
+        },
+        {
+            "id":"5",
+            "name":"Summer Collection"
+        }
+
+    ],
+    "collections": [
+        {
+            "id": "1",
+            "name": "Linen Dresses",
+            "categoryId": "1",
+            "imgName": "DSC04126.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Abaya Dresses",
+            "categoryId": "1",
+            "imgName": "DSC03528.jpg"
+        },
+        {
+            "id": "3",
+            "name":"Buttoned Linen Sets",
+            "categoryId": "1",
+            "imgName": "DSC03768.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Plush Cotton Scarves",
+            "categoryId": "2",
+            "imgName": "image_a63e9563-7e63-4577-b56a-f188d941e0a6.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Classic Grace Cotton Scarves",
+            "categoryId": "2",
+            "imgName": "DSC03922.jpg"
+
+        },
+        {
+            "id": "6",
+            "name": "Thin Grace Cotton Scarves",
+            "categoryId": "2",
+            "imgName": "DSC03762.jpg"
+
+        },
+        {
+            "id": "7",
+            "name": "Delicate Cotton Scarves",
+            "categoryId": "2",
+            "imgName": "Sjaal_In_Door_Shoot_00427.jpg"
+
+        },
+        {
+            "id": "8",
+            "name": "Charm Cotton Scarves",
+            "categoryId": "2",
+            "imgName": "DSC03310.jpg"
+
+        },
+        {
+            "id": "9",
+            "name": "Satin Scarves",
+            "categoryId": "2",
+            "imgName": "IMG-20230819-125233-654.jpeg"
+
+        },
+        {
+            "id": "10",
+            "name": "Printed Chiffon Scarves",
+            "categoryId": "2",
+            "imgName": "DSC03165.jpg"
+        },
+        {
+            "id": "11",
+            "name": "Sleeved Prayer Sets",
+            "categoryId": "3",
+            "imgName": "DSC04053.jpg"
+        },
+        {
+            "id": "12",
+            "name": "Non-Sleeved Prayer Sets",
+            "categoryId": "3",
+            "imgName": "20231108-140228.jpg"
+        },
+        {
+            "id": "13",
+            "name": "Prayer Isdals",
+            "categoryId": "3",
+            "imgName": "3554650532.png"
+        },
+        {
+            "id": "14",
+            "name": "Wool Scarves",
+            "categoryId": "4",
+            "imgName": "image_11739673-f18d-4ee2-92c5-87ca522efa58.jpg"
+        },
+        {
+            "id": "15",
+            "name": "Pullovers",
+            "categoryId": "4",
+            "imgName": "image.jpg"
+        },
+        {
+            "id": "16",
+            "name": "Chiffon Coverups",
+            "categoryId": "5",
+            "imgName":"20230515-152828.jpg"
+        },
+        {
+            "id": "17",
+            "name": "Satin Coverups",
+            "categoryId": "5",
+            "imgName":"image.jpeg"
+        }
+    ]
 }
