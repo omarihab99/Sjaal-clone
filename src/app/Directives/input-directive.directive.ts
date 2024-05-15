@@ -11,19 +11,22 @@ export class InputDirectiveDirective {
 
   constructor(private el: ElementRef) {
     this.initialBorderStyle = this.el.nativeElement.style.border; // Store the initial border style
+    this.el.nativeElement.setAttribute('tabindex', '0'); // Make the div focusable
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.el.nativeElement.style.border = '2px solid gray'; // Apply the border on mouse enter
+    this.el.nativeElement.style.border = '2px solid gray'; 
   }
 
   @HostListener('mouseleave') onMouseLeave() {
     this.el.nativeElement.style.border = this.initialBorderStyle; // Restore the initial border style on mouse leave
   }
 
-  @HostListener('click') onClick() {
-    this.el.nativeElement.style.border = '3px solid gray'; // Change the border on click
+  @HostListener('focus') onFocus() {
+    this.el.nativeElement.style.border = '3px solid black'; // Change the border on focus
   }
 
+  @HostListener('blur') onBlur() {
+    this.el.nativeElement.style.border = this.initialBorderStyle; // Restore the initial border style on blur
+  }
 }
-

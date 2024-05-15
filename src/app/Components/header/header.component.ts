@@ -13,5 +13,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  cartCount = 0 ;
 
 }
