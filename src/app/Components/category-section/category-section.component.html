@@ -1,0 +1,10 @@
+<div class="w-75 mx-auto">
+    <h2 class="mt-5">{{category.name}}</h2>
+    <div class="row mt-5">
+        @for (collection of collections; track collection.id) {
+            <div class="col-sm-12 col-md-6 {{colSize}} ">
+                <app-collection-card [collection]="collection"></app-collection-card>
+            </div>
+        }
+    </div>
+</div>
