@@ -27,108 +27,108 @@
             "id": "1",
             "name": "Linen Dresses",
             "categoryId": "1",
-            "imgName": "DSC04126.jpg"
+            "imgName": "DSC04126 (5).jpg"
         },
         {
             "id": "2",
             "name": "Abaya Dresses",
             "categoryId": "1",
-            "imgName": "DSC03528.jpg"
+            "imgName": "20240228-DSC03528 (5).jpg"
         },
         {
             "id": "3",
             "name":"Buttoned Linen Sets",
             "categoryId": "1",
-            "imgName": "DSC03768.jpg"
+            "imgName": "20240228-DSC03768 (5).jpg"
         },
         {
             "id": "4",
             "name": "Plush Cotton Scarves",
             "categoryId": "2",
-            "imgName": "image_a63e9563-7e63-4577-b56a-f188d941e0a6.jpg"
+            "imgName": "image_a63e9563-7e63-4577-b56a-f188d941e0a6 (5).jpg"
         },
         {
             "id": "5",
             "name": "Classic Grace Cotton Scarves",
             "categoryId": "2",
-            "imgName": "DSC03922.jpg"
+            "imgName": "DSC03922 (5).jpg"
 
         },
         {
             "id": "6",
             "name": "Thin Grace Cotton Scarves",
             "categoryId": "2",
-            "imgName": "DSC03762.jpg"
+            "imgName": "20230907-DSC03762 (5).jpg"
 
         },
         {
             "id": "7",
             "name": "Delicate Cotton Scarves",
             "categoryId": "2",
-            "imgName": "Sjaal_In_Door_Shoot_00427.jpg"
+            "imgName": "Sjaal_In_Door_Shoot_00427 (5).jpg"
 
         },
         {
             "id": "8",
             "name": "Charm Cotton Scarves",
             "categoryId": "2",
-            "imgName": "DSC03310.jpg"
+            "imgName": "DSC03310 (5).jpg"
 
         },
         {
             "id": "9",
             "name": "Satin Scarves",
             "categoryId": "2",
-            "imgName": "IMG-20230819-125233-654.jpeg"
+            "imgName": "IMG-20230819-125233-654 (5).jpeg"
 
         },
         {
             "id": "10",
             "name": "Printed Chiffon Scarves",
             "categoryId": "2",
-            "imgName": "DSC03165.jpg"
+            "imgName": "20230907-DSC03762 (5).jpg"
         },
         {
             "id": "11",
             "name": "Sleeved Prayer Sets",
             "categoryId": "3",
-            "imgName": "DSC04053.jpg"
+            "imgName": "20240228-DSC04053 (5).jpg"
         },
         {
             "id": "12",
             "name": "Non-Sleeved Prayer Sets",
             "categoryId": "3",
-            "imgName": "20231108-140228.jpg"
+            "imgName": "20231108-140228 (5).jpg"
         },
         {
             "id": "13",
             "name": "Prayer Isdals",
             "categoryId": "3",
-            "imgName": "3554650532.png"
+            "imgName": "3554650532 (5).png"
         },
         {
             "id": "14",
             "name": "Wool Scarves",
             "categoryId": "4",
-            "imgName": "image_11739673-f18d-4ee2-92c5-87ca522efa58.jpg"
+            "imgName": "image_11739673-f18d-4ee2-92c5-87ca522efa58 (5).jpg"
         },
         {
             "id": "15",
             "name": "Pullovers",
             "categoryId": "4",
-            "imgName": "image.jpg"
+            "imgName": "image (5).jpg"
         },
         {
             "id": "16",
             "name": "Chiffon Coverups",
             "categoryId": "5",
-            "imgName":"20230515-152828.jpg"
+            "imgName":"20230515-152828 (5).jpg"
         },
         {
             "id": "17",
             "name": "Satin Coverups",
             "categoryId": "5",
-            "imgName":"image.jpeg"
+            "imgName":"image (5).jpeg"
         }
     ]
 }

@@ -47,8 +47,10 @@ export class SidebarComponent implements OnInit {
       collections.classList.add('d-none');
     }
     this.categoryService.getCategories().subscribe(
-      (categories) => {
-        this.categories = categories;
+      {
+        next: (categories) => {
+          this.categories = categories;
+        }
       }
     )
     if (categories) {
@@ -76,8 +78,6 @@ export class SidebarComponent implements OnInit {
 
   }
   openSelectedCategory(event: Event) {
-    console.log(event);
-    
     const categories: Element = document.querySelector('#divCategoriesTabs')!;
     const collections: Element = document.querySelector('#divCollectionsTabs')!;
     if (categories) {
@@ -89,10 +89,10 @@ export class SidebarComponent implements OnInit {
     const activeCategoryId = this.categories.find((category) => category.name === this.activeCategory)?.id;
     if (activeCategoryId) {
       this.collectionService.getCollectionByID(activeCategoryId).subscribe(
-        (collections) => {
-          console.log(collections);
-          
-          this.collections = collections;
+        {
+          next: (collections) => {
+            this.collections = collections;
+          }
         }
       )
     }
