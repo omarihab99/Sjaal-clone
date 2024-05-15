@@ -141,7 +141,8 @@
         "../assets/images/20230515-152828 (1).jpg",
         "../assets/images/BlackLinenDress.webp"
       ]
-    },{
+    },
+    {
       "id": "1",
       "categoryId": "1",
       "name": "Black Linen Dress",
@@ -157,7 +158,8 @@
         "../assets/images/20230515-152828 (1).jpg",
         "../assets/images/BlackLinenDress.webp"
       ]
-    },{
+    },
+    {
       "id": "1",
       "categoryId": "1",
       "name": "Black Linen Dress",
@@ -173,7 +175,8 @@
         "../assets/images/20230515-152828 (1).jpg",
         "../assets/images/BlackLinenDress.webp"
       ]
-    },{
+    },
+    {
       "id": "1",
       "categoryId": "1",
       "name": "Black Linen Dress",
@@ -215,18 +218,26 @@
       "categoryId": 1,
       "name": "Black Linen Dress",
       "price": 850,
-      "size": "S/M",
-      "quantity": 3,
-      "image": "assets/images/BlackLinenDress.webp"
-    },
-    {
-      "id": "1",
-      "categoryId": 1,
-      "name": "Black Linen Dress",
-      "price": 850,
       "size": "L/XL",
       "quantity": 2,
       "image": "assets/images/BlackLinenDress.webp"
+    },
+    {
+      "id": "2",
+      "categoryId": 1,
+      "name": "Black Buttoned Linen Set",
+      "price": 1000,
+      "size": "S/M",
+      "quantity": 1,
+      "image": "https://www.sjaaleg.com/cdn/shop/files/20240228-DSC03455.jpg?v=1709198773&width=300"
+    },
+    {
+      "id": "3",
+      "categoryId": 1,
+      "name": "Adonis",
+      "price": 200,
+      "quantity": 2,
+      "image": "https://www.sjaaleg.com/cdn/shop/products/3558338445.jpg?v=1685812038&width=300"
     }
   ]
 }
