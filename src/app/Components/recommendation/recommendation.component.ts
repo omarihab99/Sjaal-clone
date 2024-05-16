@@ -21,13 +21,13 @@ export class RecommendationComponent implements OnInit{
     console.log(this.categoryId);
     this.categoryId = localStorage.getItem("categoryId");
     
-    this.productsService.getCategoryProduct(this.categoryId).subscribe({
-      next:(data:any)=>{
+    this.productsService.getCollectionProducts(this.categoryId).subscribe({
+      next:(data:Product[])=>{
         this.products = data;
         console.log(this.products)
         
       },
-      error:(err)=>{
+      error:(err: any)=>{
         console.log(err)
 
       }
