@@ -11,7 +11,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
   styleUrls:['./product-card.component.css']
 })
 export class ProductCardComponent {
-  @Input() product:Product={id:"", categoryId:"", name:"", price:0, availableSizes:[], availableQuantaties:0, images:[], description:""}
+  @Input() product:Product={id:"", collectionId:"", name:"", price:0, availableSizes:[], availableQuantaties:0, images:[], description:""}
   buttonAppear:boolean = true;
   constructor(private activeLink: ActivatedRoute){
   

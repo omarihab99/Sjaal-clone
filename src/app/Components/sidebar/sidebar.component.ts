@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +21,7 @@ import { Collection } from '../../Models/collection.model';
 })
 export class SidebarComponent implements OnInit {
   constructor(private categoryService: CategoryService, private collectionService: CollectionService) { }
+  @Input() sideBarId!: string;
   categories!: Category[];
   collections!: Collection[];
   faArrowRight = faArrowRight;
@@ -28,7 +29,9 @@ export class SidebarComponent implements OnInit {
   activeCategory: string = "";
   offcanvas! : Element;
   ngOnInit(): void {
-    this.offcanvas = document.querySelector('#sidebar')!;
+    this.offcanvas = document.querySelector('#offcanvasNavbar')!;
+    console.log(this.offcanvas);
+    //TODO: Fix error offcanvas null.
     this.offcanvas.addEventListener('hidden.bs.offcanvas', () => {
       this.activeCategory = "";
       this.openHome();
