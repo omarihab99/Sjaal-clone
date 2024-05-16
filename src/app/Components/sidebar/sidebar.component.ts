@@ -20,6 +20,10 @@ import { Collection } from '../../Models/collection.model';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent implements AfterViewInit {
+collectionClicked(collectionId:string) {
+  localStorage.setItem("collectionId",collectionId);
+
+}
   constructor(private categoryService: CategoryService, private collectionService: CollectionService) { }
   
   @Input() sideBarId!: string;

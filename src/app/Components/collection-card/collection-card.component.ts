@@ -13,12 +13,17 @@ import { CollectionService } from '../../Services/collection.service';
   styleUrl: './collection-card.component.css',
 })
 export class CollectionCardComponent implements OnInit {
+
   @Input() collection!: Collection;
   faArrow = faArrowRight;
   faArrowRight = faArrowRight;
   faLongArrowRight = faLongArrowRight;
   ngOnInit(): void {
+   
     
+  }
+
+  collectionClicked() {
     localStorage.setItem("collectionId", this.collection.id);
   }
 }

@@ -12,17 +12,17 @@ import { Product } from '../../Models/product.model';
   styleUrl: './recommendation.component.css'
 })
 export class RecommendationComponent implements OnInit {
-  collectionId: string = "";
+
   products: Product[] = []
 
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    console.log(this.collectionId);
-    const collectionId = localStorage.getItem("collectionId");
-    if (collectionId) {
 
-      this.productsService.getLimitedCollectionProducts(this.collectionId, 4).subscribe({
+    const collectionId = localStorage.getItem("collectionId");
+    if (collectionId) {      
+
+      this.productsService.getLimitedCollectionProducts(collectionId, 4).subscribe({
         next: (data: Product[]) => {
           this.products = data;
           console.log(this.products)

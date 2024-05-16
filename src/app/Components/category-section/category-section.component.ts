@@ -23,6 +23,8 @@ export class CategorySectionComponent implements OnInit {
     this.collectionService.getCollectionByID(this.category.id).subscribe({
       next: (collections) => {
         this.collections = collections;
+        console.log(collections);
+        
       }
     });
   }

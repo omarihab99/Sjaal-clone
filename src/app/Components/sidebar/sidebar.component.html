@@ -75,8 +75,9 @@
               type="button" 
               role="tab" 
               aria-selected="false"
-              routerLink="/collections/{{collection.id}}">
+              routerLink="/collections/{{collection.id}}" (click)="collectionClicked(collection.id)">
                 {{collection.name}} 
+              
             </button>
           }
         </div>
