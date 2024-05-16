@@ -19,13 +19,13 @@ import { CartProductsComponent } from './Components/cart-products/cart-products.
   imports: [
     RouterOutlet,
     MainsectionComponent,
-     SidebarComponent, 
-     CategorySectionComponent, 
-     HomeComponent,  
-     HeaderComponent, 
-     FeedbackComponent, 
-     FooterComponent, HeaderComponent, CartComponent, CartProductsComponent, ProductDetailsComponent, ProductsPageComponent
-    ],
+    SidebarComponent,
+    CategorySectionComponent,
+    HomeComponent,
+    HeaderComponent,
+    FeedbackComponent,
+    FooterComponent, HeaderComponent, CartComponent, CartProductsComponent, ProductDetailsComponent, ProductsPageComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

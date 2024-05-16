@@ -18,6 +18,7 @@ export class CollectionCardComponent implements OnInit {
   faArrowRight = faArrowRight;
   faLongArrowRight = faLongArrowRight;
   ngOnInit(): void {
+    
     localStorage.setItem("collectionId", this.collection.id);
   }
 }

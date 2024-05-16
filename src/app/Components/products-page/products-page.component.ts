@@ -4,7 +4,9 @@ import { FiltrationComponent } from '../filtration/filtration.component';
 import { ProductsComponent } from '../products/products.component';
 import { ProductsService } from '../../Services/products.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { Product } from '../../Models/product.model';
+import { Collection } from '../../Models/collection.model';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-products-page',
   standalone: true,
@@ -15,27 +17,31 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers:[
-    ProductsService
+    ProductsService,
   ],
   templateUrl: './products-page.component.html',
   styles:''
 })
 export class ProductsPageComponent {
-  @Input() collectionID="1";
-  constructor(private productService:ProductsService){}
+  collectionID!:string;
+  constructor(private productService:ProductsService, private route:ActivatedRoute){
+    console.log(this.route.snapshot.params);
+    
+    this.collectionID=this.route.snapshot.params['collectionId'];
+  }
 
-  mydata:any;
-  products:any;
+  products!: Product[];
   length:any;
   desc:any;
-  productsOfCollection:any[]=[];
+  productsOfCollection:Product[]=[];
   collectionName:any;
   
   ngOnInit(): void {
+    console.log(this.route.snapshot.params);
+
     this.productService.getAllProducts().subscribe({
       next:(data)=>{
-        this.mydata=data;
-        this.products=this.mydata;
+        this.products=data;
      // console.log(this.products.length);
      this.getCollectionProducts(this.products);
       },
@@ -50,7 +56,7 @@ export class ProductsPageComponent {
 
     this.productService.getCollectionByID(this.collectionID).subscribe({
       next:(data)=>{
-        let collection:any=data;
+        let collection:Collection=data;
        this.collectionName=collection.name;
       },
       error:(err)=>{

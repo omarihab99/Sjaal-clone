@@ -1,4 +1,4 @@
-<a routerLink="/collections/{{collection.name.split(' ').join('-')}}">
+<a routerLink="/collections/{{collection.id}}">
     <div (mouseover)="faArrow = faLongArrowRight" (mouseout)="faArrow = faArrowRight" class="collection-container m-3">
         <div class="img-container col-12 p-0 ">
             <img src="/assets/images/{{collection.imgName}}" alt="">

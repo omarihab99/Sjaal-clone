@@ -3,7 +3,7 @@
   Button
 </button> -->
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="{{sideBarId}}" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start open" tabindex="-1" id="{{sideBarId}}" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
@@ -75,7 +75,8 @@
               type="button" 
               role="tab" 
               aria-selected="false"
-              routerLink="/collections/{{collection.name.split(' ').join('-')}}">
+              (click)="closeSideBar()"
+              routerLink="/collections/{{collection.id}}">
                 {{collection.name}} 
             </button>
           }

@@ -23,6 +23,9 @@
   animation: fadein 0.5s;
 }
 
+.open{
+  visibility: visible;
+}
 @keyframes fadein {
   from {
     opacity: 0;

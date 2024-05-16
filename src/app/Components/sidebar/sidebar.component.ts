@@ -21,7 +21,7 @@ import { Collection } from '../../Models/collection.model';
 })
 export class SidebarComponent implements AfterViewInit {
   constructor(private categoryService: CategoryService, private collectionService: CollectionService) { }
-
+  
   @Input() sideBarId!: string;
   categories!: Category[];
   collections!: Collection[];
@@ -104,5 +104,7 @@ export class SidebarComponent implements AfterViewInit {
     }
 
   }
-
+  closeSideBar(){
+      this.offcanvas.classList.toggle('open');
+  }
 }
