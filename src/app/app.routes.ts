@@ -10,9 +10,9 @@ export const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "collections/:collectionName", component: HomeComponent },
     // { path: "collections", component: HomeComponent },
-    {path:"product", component:ProductDetailsComponent},
     // {path:"header", component:HeaderComponent},
     {path:"feedback", component:FeedbackComponent},
-    {path:"footer", component:FooterComponent}
+    {path:"footer", component:FooterComponent},
+    {path:"product/:id", component:ProductDetailsComponent}
 ];
 

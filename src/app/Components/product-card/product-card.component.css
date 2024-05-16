@@ -1,0 +1,23 @@
+
+
+a:hover{
+    background-color: white;
+    border-width:2px ;
+    color: black;
+}
+
+#title:hover{
+    text-decoration: underline;
+}
+
+#productImg{
+    /* background-image: url('../../../assets/images/TealLinenDress.webp'); */
+    background-size: cover;
+    transition: 0.8s ease-out;
+}
+
+#productImg:hover{
+    /* background-image: url('../../../assets/images/TealLinenDress2.webp'); */
+    background-size: 85%;
+    
+}

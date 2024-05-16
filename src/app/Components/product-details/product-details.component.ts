@@ -1,37 +1,143 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Product } from '../../Models/product.model';
+import { CartService } from '../../Services/cart.service';
+import { CartProduct } from '../../Models/cart-product.model';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { CustomCurrencyPipe } from '../../Pipes/custom-currency.pipe';
+import { ProductCardComponent } from '../product-card/product-card.component';
+import { RecommendationComponent } from '../recommendation/recommendation.component';
+import { ProductsService } from '../../Services/products.service';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule, RecommendationComponent, ProductCardComponent],
+  providers: [CartService, ProductsService],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
-export class ProductDetailsComponent {
-  product:any ={
-    "name": "Black Linen Dress",
-    "price": 850,
-    "availableSizes": [
-      "s/m",
-      "l/xl"
-    ],
-    "availableQuantaties": 5,
-    "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
-    "images": ["assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp", "assets/images/BlackLinenDress.webp" ,"assets/images/BlackLinenDress.webp"]
-    
+export class ProductDetailsComponent implements OnInit {
+  cartProduct: CartProduct = {};
+  productId: string = ""
+  product: Product = {
+    id: "",
+    categoryId: "",
+    name: "",
+    price: 0,
+    availableSizes: [],
+    availableQuantaties: 0,
+    description: "",
+    images: []
   }
-  clickedImage:any = this.product.images[0];
+
+  clickedImage: any=""
+  desiredQuantity = signal(1);
+  choosenSize: string = this.product.availableSizes[0]
+  cartProducts: CartProduct[] = []
+  categoryId:string = "" 
+
+  constructor(private cartService: CartService, private productsService: ProductsService, private activeLink: ActivatedRoute) { 
+  }
   
-  changeImage(newImage:string){
+
+  
+  ngOnInit(): void {
+    this.productId = this.activeLink.snapshot.url[1].path;
+
+    this.productsService.getProductById(this.productId).subscribe({
+    
+
+      next: (data: any) => {
+        this.product = data;
+        this.clickedImage = this.product.images[0];
+        this.choosenSize = this.product.availableSizes[0];
+
+      },
+      error: (err:any) => {
+        console.log(err)
+
+      },
+    })
+
+  }
+
+
+  changeImage(newImage: string) {
     this.clickedImage = newImage;
   }
-  
-  desiredQuantity = signal(0);
-  increase(){   
-      this.desiredQuantity.update((val)=>val+1);
+
+  chooseSize(size: string) {
+    this.choosenSize = size;
   }
-  decrease(){
-      this.desiredQuantity.update((val)=>val-1);
+
+  increase() {
+    this.desiredQuantity.update((val) => val + 1);
+  }
+  decrease() {
+    this.desiredQuantity.update((val) => val - 1);
+  }
+
+  addToCart() {
+    this.cartProduct = {
+      id: this.product.id,
+      categoryId: this.product.categoryId,
+      name: this.product.name,
+      price: this.product.price,
+      size: this.choosenSize,
+      quantity: this.desiredQuantity(),
+      image: this.product.images[0]
+    }
+
+    this.cartService.getCartProducts().subscribe({
+
+      next: (data: any) => {
+
+        this.cartProducts = data;
+
+        let neededProduct: CartProduct | any = this.cartProducts.find(product => product.id === this.cartProduct.id);
+
+        if (neededProduct && neededProduct.size == this.cartProduct.size) {
+          console.log("in update");
+          this.cartProduct.quantity = this.cartProduct.quantity + neededProduct.quantity;
+          this.cartService.updateProduct(this.cartProduct).subscribe({
+            next: (data) => {
+
+            },
+            error: (err: any) => {
+              console.log(err);
+              window.alert("something went wrong")
+
+            }
+          })
+
+        }
+        else {
+          console.log("in add");
+          console.log(this.cartProduct);
+
+
+          this.cartService.addToCart(this.cartProduct).subscribe({
+            next: (data) => {
+
+
+
+            },
+            error: (err: any) => {
+              console.log(err);
+              window.alert("something went wrong")
+
+            }
+          })
+        }
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+
   }
 }

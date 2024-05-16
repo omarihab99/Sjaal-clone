@@ -8,10 +8,12 @@ import { HomeComponent } from './Components/home/home.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FeedbackComponent } from './Components/feedback/feedback.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { ProductsPageComponent } from './Components/products-page/products-page.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainsectionComponent, SidebarComponent, CategorySectionComponent, HomeComponent,ProductDetailsComponent,HeaderComponent,FeedbackComponent,FooterComponent],
+  imports: [ProductsPageComponent,RouterOutlet, MainsectionComponent, SidebarComponent, CategorySectionComponent, HomeComponent,ProductDetailsComponent,HeaderComponent,FeedbackComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
