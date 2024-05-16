@@ -9,4 +9,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DescriptionComponent{
 @Input()  description:any;
+@Input() coll_name:any;
+
 }

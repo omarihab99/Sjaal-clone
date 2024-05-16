@@ -7,9 +7,14 @@ import { Injectable } from '@angular/core';
 export class ProductsService {
   constructor(private httpClient:HttpClient) { }
 
-  private DB = "http://localhost:3000/collections";
+  private collectionsDB = "http://localhost:3000/collections";
+  private productsDB ="http://localhost:3000/products";
 
   getAllProducts(){
-    return this.httpClient.get(this.DB);
+    return this.httpClient.get(this.productsDB);
+  }
+
+  getCollectionByID(collectionId:string){
+    return this.httpClient.get(this.collectionsDB+"/"+collectionId);
   }
 }
