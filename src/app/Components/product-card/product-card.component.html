@@ -1,20 +1,26 @@
 <div class="container">
-    <div class="card" style="width: 18rem;border-radius: 0%;border: none;width: 300px;">
-        <!-- img hover -->
-        <a href="product/{{product.id}}">
-          <div id="productImg" class="card-img-top img-fluid" alt="TealLinenDress" style="height: 350px;border-radius: 0%; background-image: url({{product.images[0]}})">
+        <div class="card" style="width: 18rem;border-radius: 0%;border: none;width: 305px;">
+                <!-- img hover -->
+                <a href="product/{{product.id}}">
+                        <div [appProduct]="{orgImg:product.images[0],hoverImg:product.images[1]}" id="productImg"
+                                class="card-img-top img-fluid" alt="Product image"
+                                style="background-image: url('{{product.images[0]}}');height: 350px;border-radius: 0%;">
 
-          </div>
-          </a>
-        <!-- <img src="../../../assets/images/TealLinenDress.webp" class="card-img-top img-fluid" alt="TealLinenDress" style="height: 350px;border-radius: 0%;"> -->
-        <div class="card-body" style="padding-left: 0%;font-size: 14px;padding-right: 0%;">
-          <p id="title" class="card-title" style="font-weight: 400; font-family: 'Proza Libre', sans-serif;font-weight: 400;">{{product.name}}</p>
-          <!-- currency pipe -->
-          <p class="card-text">{{product.price |customCurrency:'EGP'}}</p>
-          @if (buttonAppear) {
-            <a href="product/{{product.id}}" style="width: 100%;border-radius: 0%;font-size: 1.5 rem;font-weight: 400;" class="btn btn-outline-dark">choose options</a>
-          }
+                        </div>
+                </a>
+
+                <!-- <img src="../../../assets/images/TealLinenDress.webp" class="card-img-top img-fluid" alt="TealLinenDress" style="height: 350px;border-radius: 0%;"> -->
+                <div class="card-body" style="padding-left: 0%;font-size: 14px;padding-right: 0%;">
+                        <p id="title" class="card-title"
+                                style="font-weight: 400; font-family: 'Proza Libre', sans-serif;font-weight: 400;">
+                                {{product.name}}</p>
+                        <!-- currency pipe -->
+                        <p class="card-text">{{product.price |customCurrency:'EGP'}}</p>
+                        @if (buttonAppear) {
+                        <a href="product/{{product.id}}"
+                                style="width: 100%;border-radius: 0%;font-size: 1.5 rem;font-weight: 400;"
+                                class="btn btn-outline-dark">choose options</a>
+                        }
+                </div>
         </div>
-      </div>
 </div>
-
