@@ -9,10 +9,15 @@ import { HeaderComponent } from './Components/header/header.component';
 import { FeedbackComponent } from './Components/feedback/feedback.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ProductsPageComponent } from './Components/products-page/products-page.component';
+import { CartComponent } from './Components/cart/cart.component';
+import { CartProductsComponent } from './Components/cart-products/cart-products.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainsectionComponent, SidebarComponent, CategorySectionComponent, HomeComponent,ProductDetailsComponent,HeaderComponent,FeedbackComponent,FooterComponent, HeaderComponent],
+  imports: [
+    RouterOutlet,
+    MainsectionComponent,ProductsPageComponent, SidebarComponent, CategorySectionComponent, HomeComponent, ProductDetailsComponent, HeaderComponent, FeedbackComponent, FooterComponent, HeaderComponent, CartComponent, CartProductsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
