@@ -34,23 +34,35 @@
       <img class=" img-fluid" width="120" height="24" src="./assets/images/new_logo.jpg" alt="">
     </a>
 
+
     <div class="header-icons">
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-      </svg>
-      <a href="/cart" class="" id>
-        <!--  cart icon -->
-        <i class="fa-thin fa-bag-shopping"></i>
-        <!-- cart count -->
-        <!-- <div class="cart-count-bubble">
-          <svg class="icon icon-cart" aria-hidden="true" focusable="false" fill="none"></svg>
+      <a class="m-3" href="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg>
 
-        </div> -->
+      </a>
+
+
+      <a href="/cart" class="m-3" id>
+        <!--  cart icon -->
+        <a routerLink="/cart"  href="/cart" class="position-relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-bag-check"
+          viewBox="0 0 16 16">
+          <path fill="black" fill-rule="evenodd"
+            d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+          <path fill="black"
+            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+        </svg>
+          <span class="position-absolute translate-middle badge rounded-pill my-bg">
+            {{cartCount}}
+          </span>
+        </a>
       </a>
     </div>
 
   </div>
 </nav>
-
-<!-- all styles of icons (in Font Awesome Classic by default) -->

@@ -12,7 +12,5 @@ export const routes: Routes = [
     // { path: "collections", component: HomeComponent },
     // {path:"header", component:HeaderComponent},
     {path:"feedback", component:FeedbackComponent},
-    {path:"footer", component:FooterComponent},
     {path:"product/:id", component:ProductDetailsComponent}
 ];
-

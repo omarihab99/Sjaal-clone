@@ -12,7 +12,7 @@ import { ProductsPageComponent } from './Components/products-page/products-page.
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ProductsPageComponent,RouterOutlet, MainsectionComponent, SidebarComponent, CategorySectionComponent, HomeComponent,ProductDetailsComponent,HeaderComponent,FeedbackComponent,FooterComponent],
+  imports: [RouterOutlet, MainsectionComponent, SidebarComponent, CategorySectionComponent, HomeComponent,ProductDetailsComponent,HeaderComponent,FeedbackComponent,FooterComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,4 +1,43 @@
-input:focus {
+.footer {
+    border-top: 0.1px solid gray;
+    width: 100%;
+}
+
+.my-input {
+
     border: none;
     outline: none;
+
+}
+
+.my-border {
+    border: 1px solid black;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group-append {
+
+    right: 0;
+    top: 0;
+}
+
+button {
+    position: absolute;
+    border: none;
+}
+
+.br {
+    position: relative;
+    border: 1px solid black;
+    /* Set the initial border style */
+}
+.custom-icon {
+    transition: transform 0.1s; /* Add transition for smooth scaling */
+  }
+  
+  .custom-icon:hover {
+    transform: scale(1.1); /* Scale the icon on hover */
   }
