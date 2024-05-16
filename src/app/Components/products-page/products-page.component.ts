@@ -16,72 +16,76 @@ import { ActivatedRoute } from '@angular/router';
     ProductsComponent,
     HttpClientModule
   ],
-  providers:[
+  providers: [
     ProductsService,
   ],
   templateUrl: './products-page.component.html',
-  styles:''
+  styles: ''
 })
 export class ProductsPageComponent {
-  collectionID!:string;
-  constructor(private productService:ProductsService, private route:ActivatedRoute){
+  collectionID!: string;
+  constructor(private productService: ProductsService, private route: ActivatedRoute) {
     console.log(this.route.snapshot.params);
-    
-    this.collectionID=this.route.snapshot.params['collectionId'];
+
+    this.collectionID = this.route.snapshot.params['collectionId'];
   }
 
   products!: Product[];
-  length:any;
-  desc:any;
-  productsOfCollection:Product[]=[];
-  collectionName:any;
-  
+  length: any;
+  desc: any;
+  productsOfCollection: Product[] = [];
+  collectionName: any;
+
   ngOnInit(): void {
     console.log(this.route.snapshot.params);
 
     this.productService.getAllProducts().subscribe({
-      next:(data)=>{
-        this.products=data;
-     // console.log(this.products.length);
-     this.getCollectionProducts(this.products);
+      next: (data) => {
+        this.products = data;
+        // console.log(this.products.length);
+        console.log("These are collection products: " );
+        console.log(this.products);
+        
+        
+        this.getCollectionProducts(this.products);
       },
-      error:(err)=>{
+      error: (err) => {
         console.log(err);
       },
-      complete:()=>{
+      complete: () => {
         console.log("completed");
-        
+
       }
     });
 
     this.productService.getCollectionByID(this.collectionID).subscribe({
-      next:(data)=>{
-        let collection:Collection=data;
-       this.collectionName=collection.name;
+      next: (data) => {
+        let collection: Collection = data;
+        this.collectionName = collection.name;
       },
-      error:(err)=>{
+      error: (err) => {
         console.log(err);
       },
-      complete:()=>{
+      complete: () => {
         console.log("completed");
-        
+
       }
     });
 
-  //  console.log(this.products);
-}
-
-
-getCollectionProducts(allProducts:any){
-   for (let index = 0; index < allProducts.length; index++) {
-    const element = allProducts[index];
-    if(element.collectionId===this.collectionID){
-        this.productsOfCollection.push(element);
-    }
+    //  console.log(this.products);
   }
 
-  this.length=this.productsOfCollection.length;
-  //console.log(this.productsOfCollection.length,this.productsOfCollection[0].description);
-  this.desc=this.productsOfCollection[0].description;
-}
+
+  getCollectionProducts(allProducts: any) {
+    for (let index = 0; index < allProducts.length; index++) {
+      const element = allProducts[index];
+      if (element.collectionId === this.collectionID) {
+        this.productsOfCollection.push(element);
+      }
+    }
+
+    this.length = this.productsOfCollection.length;
+    //console.log(this.productsOfCollection.length,this.productsOfCollection[0].description);
+    this.desc = this.productsOfCollection[0].description;
+  }
 }

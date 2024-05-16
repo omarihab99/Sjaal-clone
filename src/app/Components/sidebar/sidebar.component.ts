@@ -104,7 +104,7 @@ export class SidebarComponent implements AfterViewInit {
     }
 
   }
-  closeSideBar(){
-      this.offcanvas.classList.toggle('open');
-  }
+  // closeSideBar(){
+  //     this.offcanvas.classList.toggle('open');
+  // }
 }

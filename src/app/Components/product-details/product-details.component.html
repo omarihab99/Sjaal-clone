@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between container all m-3">
-    <div class="row">
+    <div class="row mt-5">
 
         <div class=" col-lg-6 left-section">
             <div class="clickedImageDiv">
@@ -11,8 +11,6 @@
                     @for (image of product.images; track $index) {
                     <li [ngClass]="{'selected': clickedImage === image}">
                         <img src="{{image}}" alt="productImage" (click)="changeImage(image)">
-
-
                     </li>
                     }
                 </ul>

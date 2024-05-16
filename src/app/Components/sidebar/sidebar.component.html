@@ -13,7 +13,7 @@
         <div class="nav flex-column nav-pills w-100 tabs-container" id="v-pills-tab" role="tablist"
           aria-orientation="vertical">
           <button class="nav-link fs-5" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
-            type="button" role="tab" aria-selected="true">Home</button>
+            type="button" role="tab" aria-selected="true" routerLink="/">Home</button>
           <button class="nav-link fs-5" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
             type="button" role="tab" aria-selected="false" (click)="openCategories()">Categories <fa-icon
               [icon]="faArrowRight" class="icon"></fa-icon></button>
@@ -75,7 +75,6 @@
               type="button" 
               role="tab" 
               aria-selected="false"
-              (click)="closeSideBar()"
               routerLink="/collections/{{collection.id}}">
                 {{collection.name}} 
             </button>
