@@ -11,11 +11,11 @@ import { RecommendationComponent } from '../recommendation/recommendation.compon
 import { ProductsService } from '../../Services/products.service';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule, RecommendationComponent, ProductCardComponent],
+  imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule, RecommendationComponent, ProductCardComponent, RouterModule],
   providers: [CartService, ProductsService],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'

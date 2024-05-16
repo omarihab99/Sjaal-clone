@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -19,19 +19,18 @@ import { Collection } from '../../Models/collection.model';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements AfterViewInit {
   constructor(private categoryService: CategoryService, private collectionService: CollectionService) { }
+
   @Input() sideBarId!: string;
   categories!: Category[];
   collections!: Collection[];
   faArrowRight = faArrowRight;
   faArrowLeft = faArrowLeft;
   activeCategory: string = "";
-  offcanvas! : Element;
-  ngOnInit(): void {
+  offcanvas!: Element;
+  ngAfterViewInit(): void {
     this.offcanvas = document.querySelector('#offcanvasNavbar')!;
-    console.log(this.offcanvas);
-    //TODO: Fix error offcanvas null.
     this.offcanvas.addEventListener('hidden.bs.offcanvas', () => {
       this.activeCategory = "";
       this.openHome();
@@ -77,7 +76,7 @@ export class SidebarComponent implements OnInit {
       homeTabs.classList.remove('d-none');
       homeTabs.classList.add('d-flex');
     }
-    
+
 
   }
   openSelectedCategory(event: Event) {
@@ -103,7 +102,7 @@ export class SidebarComponent implements OnInit {
       collections.classList.remove('d-none');
       collections.classList.add('d-flex');
     }
-   
+
   }
- 
+
 }

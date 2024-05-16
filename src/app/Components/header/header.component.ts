@@ -2,13 +2,14 @@ import { Component, OnChanges } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CartService } from '../../Services/cart.service';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     FontAwesomeModule, 
-    SidebarComponent
+    SidebarComponent,
+    RouterModule
   ],
   providers: [CartService],
   templateUrl: './header.component.html',

@@ -8,9 +8,13 @@ import { Observable } from 'rxjs';
 export class ProductsService {
   URL = "http://localhost:3000/products"
   constructor(private http: HttpClient) { }
-
   getCollectionProducts(collectionId:string) : Observable<Product[]> {
-    return this.http.get(this.URL+`?categoryId=${collectionId}`) as Observable<Product[]>;
+    return this.http.get(this.URL+`?collectionId=${collectionId}`) as Observable<Product[]>;
+  }
+ 
+  getLimitedCollectionProducts(collectionId:string, limit:number) : Observable<Product[]> {
+    const startIndex = 1;
+    return this.http.get(this.URL+`?collectionId=${collectionId}&_start=${startIndex}&_limit=${limit}`) as Observable<Product[]>;
   }
 
   getProductById(productId:string) : Observable<Product> {

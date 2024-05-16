@@ -16,7 +16,7 @@
             </div>
            
          <div class="col mt-5 ms-5 me-5 d-flex flex-column">
-          <a   routerLink="/product" class= "name">{{ product.name }}</a>
+          <a routerLink="/product" class= "name">{{ product.name }}</a>
           
             <span  style="opacity: 0.8; font-size:small; font-family: 'Proza Libre',sans-serif;">  {{ (product.price ? (product.price | customCurrency:'EGP') : 'N/A') }}</span>
             @if (product.size) {

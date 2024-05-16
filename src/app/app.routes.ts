@@ -5,12 +5,13 @@ import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { FeedbackComponent } from './Components/feedback/feedback.component';
 
-
+import { CartComponent } from './Components/cart/cart.component';
 export const routes: Routes = [
-    { path: "", component: HomeComponent },
-    { path: "collections/:collectionName", component: HomeComponent },
+    { path: "" ,component: HomeComponent, pathMatch: "full" },
+    // { path: "collections/:collectionName", component: HomeComponent },
     // { path: "collections", component: HomeComponent },
     // {path:"header", component:HeaderComponent},
     {path:"feedback", component:FeedbackComponent},
-    {path:"product/:id", component:ProductDetailsComponent}
+    {path:"product/:id", component:ProductDetailsComponent},
+    {path: "cart", component: CartComponent},
 ];

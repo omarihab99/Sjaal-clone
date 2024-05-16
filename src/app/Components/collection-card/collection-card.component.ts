@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Collection } from '../../Models/collection.model';
 import { RouterModule } from '@angular/router';
 import { faArrowRight, faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -12,9 +12,12 @@ import { CollectionService } from '../../Services/collection.service';
   templateUrl: './collection-card.component.html',
   styleUrl: './collection-card.component.css',
 })
-export class CollectionCardComponent {
+export class CollectionCardComponent implements OnInit {
   @Input() collection!: Collection;
   faArrow = faArrowRight;
   faArrowRight = faArrowRight;
   faLongArrowRight = faLongArrowRight;
+  ngOnInit(): void {
+    localStorage.setItem("collectionId", this.collection.id);
+  }
 }
