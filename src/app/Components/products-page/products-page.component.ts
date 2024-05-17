@@ -38,7 +38,7 @@ export class ProductsPageComponent {
 
   ngOnInit(): void {
     console.log(this.route.snapshot.params);
-
+    
     this.productService.getAllProducts().subscribe({
       next: (data) => {
         this.products = data;
@@ -85,7 +85,13 @@ export class ProductsPageComponent {
     }
 
     this.length = this.productsOfCollection.length;
+
+    if(this.length==0){
+      this.desc = "There is no products in this category!";
+    }else{
+      this.desc = this.productsOfCollection[0].description;
+    }
     //console.log(this.productsOfCollection.length,this.productsOfCollection[0].description);
-    this.desc = this.productsOfCollection[0].description;
+    
   }
 }
