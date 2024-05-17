@@ -6,6 +6,9 @@ import { CartProduct } from '../../Models/cart-product.model';
 import { RouterLink } from '@angular/router';
 import { CustomCurrencyPipe } from "../../Pipes/custom-currency.pipe";
 import { CartTotalPriceComponent } from "../cart-total-price/cart-total-price.component";
+import { CartProductComponent } from "../cart-product/cart-product.component";
+import { YourCartEmptyComponent } from "../your-cart-empty/your-cart-empty.component";
+import { CartTitleComponent } from "../cart-title/cart-title.component";
 
 @Component({
     selector: 'app-cart-products',
@@ -13,7 +16,7 @@ import { CartTotalPriceComponent } from "../cart-total-price/cart-total-price.co
     providers: [CartProductsService],
     templateUrl: './cart-products.component.html',
     styleUrl: './cart-products.component.css',
-    imports: [CommonModule, HttpClientModule, RouterLink, CustomCurrencyPipe, CartTotalPriceComponent]
+    imports: [CommonModule, HttpClientModule, RouterLink, CustomCurrencyPipe, CartTotalPriceComponent, CartProductComponent, YourCartEmptyComponent, CartTitleComponent]
 })
 export class CartProductsComponent implements OnInit{
 
@@ -29,6 +32,12 @@ export class CartProductsComponent implements OnInit{
     this.fetchProducts();
     
     
+  }
+  getDeletedProduct(event:CartProduct){
+
+    this.products = this.products.filter(item =>item !== event);
+    
+
   }
 
   fetchProducts() {
@@ -58,21 +67,8 @@ export class CartProductsComponent implements OnInit{
         this.subtotal = 0;
     }
 }
-incrementQuantity(product: CartProduct) {
-  this.productService.incrementQuantity(product).subscribe(() => {
-    this.fetchProducts();
-  });
-}
 
-decrementQuantity(product: CartProduct) {
-  this.productService.decrementQuantity(product).subscribe(() => {
-    this.fetchProducts();
-  });
-}
-removeFromCart(productId: any) {
-  this.productService.removeFromCart(productId).subscribe(() => {
-    this.fetchProducts();
-  });
-}
+
+
 
 }
