@@ -16,5 +16,9 @@ export class CheckoutDirective {
     this.container.nativeElement.style.backgroundColor = this.mycolor.bgcolor;
 
   }
+  @HostListener('mouseleave') leave(){
+    this.container.nativeElement.style.borderColor = "";
+    this.container.nativeElement.style.backgroundColor = "";
+  }
 
 }

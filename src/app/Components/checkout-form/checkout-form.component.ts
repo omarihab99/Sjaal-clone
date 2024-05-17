@@ -80,5 +80,9 @@ export class CheckoutFormComponent {
       {value:"North Sinai",id:"exampleRadios26",price:90},
       {value:"South Sinai",id:"exampleRadios27",price:90},
   ]
-
+  click(e: Event){
+    let target = e.currentTarget as HTMLInputElement;
+    let input = target.querySelector('input');
+    input!.checked = true;
+  }
 }
