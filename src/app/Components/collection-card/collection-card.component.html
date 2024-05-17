@@ -1,0 +1,10 @@
+<a routerLink="/collections/{{collection.id}}"(click)="collectionClicked()">
+    <div (mouseover)="faArrow = faLongArrowRight" (mouseout)="faArrow = faArrowRight" class="collection-container m-3">
+        <div class="img-container col-12 p-0 ">
+            <img src="/assets/images/{{collection.imgName}}" alt="">
+        </div>
+        <a routerLink="/collections/{{collection.name.split(' ').join('-')}}" >
+            {{collection.name}}<fa-icon [icon]="faArrow"></fa-icon>
+        </a>
+    </div>
+</a>

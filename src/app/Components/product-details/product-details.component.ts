@@ -11,11 +11,11 @@ import { RecommendationComponent } from '../recommendation/recommendation.compon
 import { ProductsService } from '../../Services/products.service';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule, RecommendationComponent, ProductCardComponent],
+  imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule, RecommendationComponent, ProductCardComponent, RouterModule],
   providers: [CartService, ProductsService],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
@@ -25,7 +25,7 @@ export class ProductDetailsComponent implements OnInit {
   productId: string = ""
   product: Product = {
     id: "",
-    categoryId: "",
+    collectionId: "",
     name: "",
     price: 0,
     availableSizes: [],
@@ -38,7 +38,7 @@ export class ProductDetailsComponent implements OnInit {
   desiredQuantity = signal(1);
   choosenSize: string = this.product.availableSizes[0]
   cartProducts: CartProduct[] = []
-  categoryId:string = "" 
+  collectionId:string = "" 
 
   constructor(private cartService: CartService, private productsService: ProductsService, private activeLink: ActivatedRoute) { 
   }
@@ -51,7 +51,7 @@ export class ProductDetailsComponent implements OnInit {
     this.productsService.getProductById(this.productId).subscribe({
     
 
-      next: (data: any) => {
+      next: (data: Product) => {
         this.product = data;
         this.clickedImage = this.product.images[0];
         this.choosenSize = this.product.availableSizes[0];
@@ -84,7 +84,7 @@ export class ProductDetailsComponent implements OnInit {
   addToCart() {
     this.cartProduct = {
       id: this.product.id,
-      categoryId: this.product.categoryId,
+      collectionId: this.product.collectionId,
       name: this.product.name,
       price: this.product.price,
       size: this.choosenSize,

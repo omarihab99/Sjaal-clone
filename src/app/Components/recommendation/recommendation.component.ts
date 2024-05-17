@@ -7,32 +7,39 @@ import { Product } from '../../Models/product.model';
   selector: 'app-recommendation',
   standalone: true,
   imports: [ProductCardComponent],
-  providers:[ProductsService],
+  providers: [ProductsService],
   templateUrl: './recommendation.component.html',
   styleUrl: './recommendation.component.css'
 })
-export class RecommendationComponent implements OnInit{
-  categoryId:any;
-  products: Product[]=[]
+export class RecommendationComponent implements OnInit {
 
-  constructor( private productsService: ProductsService){}
+  products: Product[] = []
+
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    console.log(this.categoryId);
-    this.categoryId = localStorage.getItem("categoryId");
-    
-    this.productsService.getCategoryProduct(this.categoryId).subscribe({
-      next:(data:any)=>{
-        this.products = data;
-        console.log(this.products)
-        
-      },
-      error:(err)=>{
-        console.log(err)
 
-      }
-    })
-    
+    const collectionId = localStorage.getItem("collectionId");
+    if (collectionId) {      
+
+      this.productsService.getLimitedCollectionProducts(collectionId, 4).subscribe({
+        next: (data: Product[]) => {
+          this.products = data;
+          console.log(this.products)
+
+        },
+        error: (err: any) => {
+          console.log(err)
+
+        }
+      })
+
+    }
+    else {
+      window.alert("Something went wrong");
+    }
+
+
   }
 
 }

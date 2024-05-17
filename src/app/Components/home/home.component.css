@@ -1,0 +1,9 @@
+.cat-section-container{
+    padding: 0px;
+}
+@media  (min-width: 400px) {
+    .categories-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

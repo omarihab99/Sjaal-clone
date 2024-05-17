@@ -1,5 +1,7 @@
 
-
-    <app-description></app-description>
-    <app-filtration></app-filtration>
-    <app-products></app-products>    
+<div class="" style="margin-left: 10%; margin-top: 5%;">
+    <app-description [coll_name]="collectionName" [description]="desc"></app-description>
+    <app-filtration [numOfProducts]="length"></app-filtration>   
+    <app-products [myProducts]="productsOfCollection"></app-products>    
+</div>
+    

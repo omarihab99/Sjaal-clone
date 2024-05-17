@@ -21,97 +21,111 @@
       "name": "Summer Collection"
     }
   ],
-
   "collections": [
     {
       "id": "1",
       "name": "Linen Dresses",
-      "categoryId": "1"
+      "categoryId": "1",
+      "imgName": "DSC04126 (5).jpg"
     },
     {
       "id": "2",
       "name": "Buttoned Linen Sets",
-      "categoryId": "1"
+      "categoryId": "1",
+      "imgName": "20240228-DSC03528 (5).jpg"
     },
     {
       "id": "3",
       "name": "Abaya Dresses",
-      "categoryId": "1"
+      "categoryId": "1",
+      "imgName": "20240228-DSC03768 (5).jpg"
     },
-
     {
       "id": "4",
       "name": "Plush Cotton Scarves",
-      "categoryId": "2"
+      "categoryId": "2",
+      "imgName": "image_a63e9563-7e63-4577-b56a-f188d941e0a6 (5).jpg"
     },
     {
       "id": "5",
       "name": "Classic Grace Cotton Scarves",
-      "categoryId": "2"
+      "categoryId": "2",
+      "imgName": "DSC03922 (5).jpg"
     },
     {
       "id": "6",
       "name": "Thin Grace Cotton Scarves",
-      "categoryId": "2"
+      "categoryId": "2",
+      "imgName": "20230907-DSC03762 (5).jpg"
     },
     {
       "id": "7",
       "name": "Delicate Cotton Scarves",
-      "categoryId": "2"
+      "categoryId": "2",
+      "imgName": "Sjaal_In_Door_Shoot_00427 (5).jpg"
     },
     {
       "id": "8",
       "name": "Charm Cotton Scarves",
-      "categoryId": "2"
+      "categoryId": "2",
+      "imgName": "DSC03310 (5).jpg"
     },
     {
       "id": "9",
       "name": "Satin Scarves",
-      "categoryId": "2"
+      "categoryId": "2",
+      "imgName": "IMG-20230819-125233-654 (5).jpeg"
     },
     {
       "id": "10",
-      "name": "Printed Chiffon Scarves"
+      "name": "Printed Chiffon Scarves",
+      "categoryId": "2",
+      "imgName": "20230907-DSC03762 (5).jpg"
     },
     {
       "id": "11",
       "name": "Sleeved Prayer Sets",
-      "categoryId": "3"
+      "categoryId": "3",
+      "imgName": "20240228-DSC04053 (5).jpg"
     },
     {
       "id": "12",
       "name": "Non-Sleeved Prayer Sets",
-      "categoryId": "3"
+      "categoryId": "3",
+      "imgName": "20231108-140228 (5).jpg"
     },
     {
       "id": "13",
       "name": "Prayer Isdals",
-      "categoryId": "3"
+      "categoryId": "3",
+      "imgName": "3554650532 (5).png"
     },
     {
       "id": "14",
       "name": "Wool Scarves",
-      "categoryId": "4"
+      "categoryId": "4",
+      "imgName": "image_11739673-f18d-4ee2-92c5-87ca522efa58 (5).jpg"
     },
     {
       "id": "15",
       "name": "Pullovers",
-      "categoryId": "4"
+      "categoryId": "4",
+      "imgName": "image (5).jpg"
     },
     {
       "id": "16",
       "name": "Chiffon Coverups",
-      "categoryId": "5"
+      "categoryId": "5",
+      "imgName": "20230515-152828 (5).jpg"
     },
     {
       "id": "17",
       "name": "Satin Coverups",
-      "categoryId": "5"
+      "categoryId": "5",
+      "imgName": "image (5).jpeg"
     }
   ],
-
   "products": [
-
     {
       "id": "1",
       "collectionId": "1",
@@ -162,10 +176,10 @@
       "availableQuantaties": 5,
       "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
       "images": [
-        "/assets/images/OliveLinenDress.webp",
-        "/assets/images/OliveLinenDress2.webp",
-        "/assets/images/OliveLinenDress3.webp",
-        "/assets/images/OliveLinenDress4.webp",
+        "/assets/images/oliveLinenDress.webp",
+        "/assets/images/oliveLinenDress2.webp",
+        "/assets/images/oliveLinenDress3.webp",
+        "/assets/images/oliveLinenDress4.webp",
         "/assets/images/OliveLinenDress5.webp"
       ]
     },
@@ -188,7 +202,6 @@
         "/assets/images/CashmereLinenDress5.webp"
       ]
     },
-
     {
       "id": "5",
       "collectionId": "2",
@@ -264,8 +277,7 @@
         "/assets/images/BeigeButtonedLinenSet5.webp"
       ]
     },
-
-    {    
+    {
       "id": "9",
       "collectionId": "3",
       "name": "Black Abaya Dress",
@@ -283,8 +295,8 @@
         "/assets/images/BlackAbayaDress4.webp",
         "/assets/images/BlackAbayaDress5.webp"
       ]
-    }, 
-    {    
+    },
+    {
       "id": "10",
       "collectionId": "3",
       "name": "Mint Abaya Dress",
@@ -302,8 +314,8 @@
         "/assets/images/MintAbayaDress4.webp",
         "/assets/images/MintAbayaDress5.webp"
       ]
-    }, 
-    {    
+    },
+    {
       "id": "11",
       "collectionId": "3",
       "name": "Beige Abaya Dress",
@@ -321,8 +333,8 @@
         "/assets/images/BeigeAbayaDress4.webp",
         "/assets/images/BeigeAbayaDress5.webp"
       ]
-    }, 
-    {    
+    },
+    {
       "id": "12",
       "collectionId": "3",
       "name": "Blush Abaya Dress",
@@ -340,9 +352,8 @@
         "/assets/images/BlushAbayaDress4.webp",
         "/assets/images/BlushAbayaDress5.webp"
       ]
-    }, 
-
-    {    
+    },
+    {
       "id": "13",
       "collectionId": "4",
       "name": "Black Plush",
@@ -361,7 +372,7 @@
         "/assets/images/BlackPlush5.webp"
       ]
     },
-    {    
+    {
       "id": "14",
       "collectionId": "4",
       "name": "Cafe Plush",
@@ -376,8 +387,8 @@
         "/assets/images/CafePlush.webp",
         "/assets/images/CafePlush2.webp"
       ]
-    }, 
-    {    
+    },
+    {
       "id": "15",
       "collectionId": "4",
       "name": "Chocolate Plush",
@@ -394,7 +405,7 @@
         "/assets/images/ChocolatePlush3.webp"
       ]
     },
-    {    
+    {
       "id": "16",
       "collectionId": "4",
       "name": "Jade Plush",
@@ -413,8 +424,7 @@
         "/assets/images/JadePlush5.webp"
       ]
     },
-
-    {    
+    {
       "id": "17",
       "collectionId": "5",
       "name": "Black Grace",
@@ -433,9 +443,9 @@
         "/assets/images/BlackGrace5.webp"
       ]
     },
-    {    
+    {
       "id": "18",
-      "collectionId": "4",
+      "collectionId": "5",
       "name": "Dark Blue Grace",
       "price": 250,
       "availableSizes": [
@@ -451,10 +461,10 @@
         "/assets/images/DarkBlueGrace4.webp",
         "/assets/images/DarkBlueGrace5.webp"
       ]
-    },    
-    {    
+    },
+    {
       "id": "19",
-      "collectionId": "4",
+      "collectionId": "5",
       "name": "Maroon Grace",
       "price": 250,
       "availableSizes": [
@@ -469,10 +479,10 @@
         "/assets/images/MaroonGrace3.webp",
         "/assets/images/MaroonGrace4.webp"
       ]
-    },    
-    {    
+    },
+    {
       "id": "20",
-      "collectionId": "4",
+      "collectionId": "5",
       "name": "Oakwood Grace",
       "price": 250,
       "availableSizes": [
@@ -489,8 +499,7 @@
         "/assets/images/OakwoodGrace5.webp"
       ]
     },
-
-    {    
+    {
       "id": "21",
       "collectionId": "11",
       "name": "Sleeved Olive Prayer Set",
@@ -508,7 +517,7 @@
         "/assets/images/SleevedOlivePrayerSet4.webp"
       ]
     },
-    {    
+    {
       "id": "22",
       "collectionId": "11",
       "name": "Sleeved Cream Prayer Set",
@@ -526,7 +535,7 @@
         "/assets/images/SleevedCreamPrayerSet4.webp"
       ]
     },
-    {    
+    {
       "id": "23",
       "collectionId": "11",
       "name": "Sleeved Mint Prayer Set",
@@ -544,7 +553,7 @@
         "/assets/images/SleevedMintPrayerSet4.webp"
       ]
     },
-    {    
+    {
       "id": "24",
       "collectionId": "11",
       "name": "Sleeved Violet Prayer Set",
@@ -562,8 +571,7 @@
         "/assets/images/SleevedVioletPrayerSet4.webp"
       ]
     },
-
-    {    
+    {
       "id": "25",
       "collectionId": "12",
       "name": "Non-Sleeved Cream Prayer Set",
@@ -581,7 +589,7 @@
         "/assets/images/Non-SleevedCreamPrayerSet4.webp"
       ]
     },
-    {    
+    {
       "id": "26",
       "collectionId": "12",
       "name": "Non-Sleeved Violet Prayer Set",
@@ -599,8 +607,8 @@
         "/assets/images/Non-SleevedVioletPrayerSet4.webp",
         "/assets/images/Non-SleevedVioletPrayerSet5.webp"
       ]
-    },    
-    {    
+    },
+    {
       "id": "27",
       "collectionId": "12",
       "name": "Non-Sleeved Olive Prayer Set",
@@ -617,8 +625,7 @@
         "/assets/images/Non-SleevedOlivePrayerSet3.webp"
       ]
     },
-
-    {    
+    {
       "id": "28",
       "collectionId": "14",
       "name": "Camel Wool Scarf",
@@ -637,7 +644,7 @@
         "/assets/images/CamelWoolScarf5.webp"
       ]
     },
-    {    
+    {
       "id": "29",
       "collectionId": "14",
       "name": "Grey Wool Scarf",
@@ -653,8 +660,8 @@
         "/assets/images/GreyWoolScarf2.webp",
         "/assets/images/GreyWoolScarf3.webp"
       ]
-    },    
-    {    
+    },
+    {
       "id": "30",
       "collectionId": "14",
       "name": "Cream Wool Scarf",
@@ -668,8 +675,8 @@
       "images": [
         "/assets/images/CreamWoolScarf.webp"
       ]
-    },    
-    {    
+    },
+    {
       "id": "31",
       "collectionId": "14",
       "name": "Black Wool Scarf",
@@ -684,14 +691,14 @@
         "/assets/images/BlackWoolScarf.webp"
       ]
     },
-
-    {    
+    {
       "id": "32",
       "collectionId": "15",
       "name": "Olive Pullover",
       "price": 550,
       "availableSizes": [
-        "S/M","L/XL"
+        "S/M",
+        "L/XL"
       ],
       "availableQuantaties": 5,
       "description": "Unisex wool pullovers made on Egyptian lands by Egyptian hands ♥️",
@@ -701,8 +708,8 @@
         "/assets/images/OlivePullover3.webp",
         "/assets/images/OlivePullover4.webp"
       ]
-    },    
-    {    
+    },
+    {
       "id": "33",
       "collectionId": "15",
       "name": "Black Pullover",
@@ -712,7 +719,7 @@
         "L/XL"
       ],
       "availableQuantaties": 5,
-      "description":"Unisex wool pullovers made on Egyptian lands by Egyptian hands ♥️",
+      "description": "Unisex wool pullovers made on Egyptian lands by Egyptian hands ♥️",
       "images": [
         "/assets/images/BlackPullover.webp",
         "/assets/images/BlackPullover2.webp",
@@ -721,13 +728,14 @@
         "/assets/images/BlackPullover5.webp"
       ]
     },
-    {    
+    {
       "id": "34",
       "collectionId": "15",
       "name": "Burgundy Pullover",
       "price": 350,
       "availableSizes": [
-       "S/M","L/XL"
+        "S/M",
+        "L/XL"
       ],
       "availableQuantaties": 5,
       "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
@@ -739,13 +747,14 @@
         "/assets/images/BurgundyPullover5.webp"
       ]
     },
-    {    
+    {
       "id": "35",
       "collectionId": "15",
       "name": "Beige Pullover",
       "price": 350,
       "availableSizes": [
-        "S/M","L/XL"
+        "S/M",
+        "L/XL"
       ],
       "availableQuantaties": 5,
       "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
@@ -757,10 +766,9 @@
         "/assets/images/BeigePullover5.webp"
       ]
     },
-
-    {    
+    {
       "id": "36",
-      "categoryId": "16",
+      "collectionId": "16",
       "name": "Hawaii",
       "price": 200,
       "availableSizes": [
@@ -772,10 +780,10 @@
       "images": [
         "/assets/images/Hawaii.webp"
       ]
-    },    
-    {    
+    },
+    {
       "id": "37",
-      "categoryId": "16",
+      "collectionId": "16",
       "name": "Kiwi",
       "price": 200,
       "availableSizes": [
@@ -790,9 +798,9 @@
         "/assets/images/Kiwi3.webp"
       ]
     },
-    {    
+    {
       "id": "38",
-      "categoryId": "16",
+      "collectionId": "16",
       "name": "Popsicle",
       "price": 200,
       "availableSizes": [
@@ -807,8 +815,7 @@
         "/assets/images/Popsicle3.webp"
       ]
     },
-
-    {    
+    {
       "id": "39",
       "collectionId": "17",
       "name": "Bahamas",
@@ -824,8 +831,8 @@
         "/assets/images/Bahamas2.webp",
         "/assets/images/Bahamas3.webp"
       ]
-    },  
-    {    
+    },
+    {
       "id": "40",
       "collectionId": "17",
       "name": "Maldives",
@@ -841,8 +848,8 @@
         "/assets/images/Maldives2.webp",
         "/assets/images/Maldives3.webp"
       ]
-    },  
-    {    
+    },
+    {
       "id": "41",
       "collectionId": "17",
       "name": "Malibu",
@@ -859,30 +866,16 @@
         "/assets/images/Malibu3.webp"
       ]
     }
-
-
-
-
   ],
-
   "cart": [
     {
-      "id": "10",
-      "categoryId": "2",
-      "name": "Black Plush",
-      "price": 300,
+      "id": "3",
+      "collectionId": "1",
+      "name": "Olive Linen Dress",
+      "price": 850,
       "size": "S/M",
       "quantity": 2,
-      "image": "/assets/images/BlackPlush.webp"
-    },
-    {
-      "id": "1",
-      "categoryId": "1",
-      "name": "Black Linen Dress",
-      "price": 850,
-      "size": "L/XL",
-      "quantity": 1,
-      "image": "assets/images/BlackLinenDress.webp"
+      "image": "/assets/images/oliveLinenDress.webp"
     }
   ]
 }

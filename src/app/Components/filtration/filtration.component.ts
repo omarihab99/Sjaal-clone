@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filtration',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './filtration.component.css'
 })
 export class FiltrationComponent {
-
+@Input() numOfProducts:any;
 }
