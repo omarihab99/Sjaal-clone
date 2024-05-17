@@ -27,7 +27,7 @@ export class ProductsPageComponent {
   mydata:any;
   products:any;
   length:any;
-  desc:any;
+  desc?:String;
   productsOfCollection:any[]=[];
   collectionName:any;
   
