@@ -11,6 +11,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ProductsPageComponent } from './Components/products-page/products-page.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { CartProductsComponent } from './Components/cart-products/cart-products.component';
+import { CheckoutFormComponent } from './Components/checkout-form/checkout-form.component';
 // import { CheckoutFormComponent } from './Components/checkout-form/checkout-form.component';
 
 @Component({
@@ -24,6 +25,7 @@ import { CartProductsComponent } from './Components/cart-products/cart-products.
     HomeComponent,
     HeaderComponent,
     FeedbackComponent,
+    CheckoutFormComponent,
     FooterComponent, HeaderComponent, CartComponent, CartProductsComponent, ProductDetailsComponent, ProductsPageComponent
   ],
   templateUrl: './app.component.html',

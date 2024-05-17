@@ -32,7 +32,7 @@ export class ProductsPageComponent {
 
   products!: Product[];
   length: any;
-  desc: any;
+  desc?:String;
   productsOfCollection: Product[] = [];
   collectionName: any;
 
