@@ -1,36 +1,36 @@
 @if(products && products.length > 0){
-  <div class="mb-5">
-    <app-cart-title></app-cart-title>
-</div> 
-  <div>
-    <div *ngIf="products && products.length > 0">
-      <table style="width: 100%; text-align: left;">
-        <thead style="border-bottom: 1px solid rgb(223, 217, 217) ;opacity: 0.6;font-family:'Proza Libre', sans-serif;font-size: 9px;font-weight: normal; " >
-          <tr class="d-flex justify-content-between">
-            <td style="width: 60%;" >PRODUCT</td>
-            <td style="width: 20%;">QUANTITY</td>
-            <td style="width: 10%;">TOTAL</td>
-          </tr>
-        </thead>
-        <tbody  class="m-5" >
-          @for (product of products; track product.id) {
-            <app-cart-product (deteltedProduct)="getDeletedProduct($event)" [oneProduct]="product"></app-cart-product>
+<div class="mb-5">
+  <app-cart-title></app-cart-title>
+</div>
+<div>
+  <div *ngIf="products && products.length > 0">
+    <table style="width: 100%; text-align: left;">
+      <thead
+        style="border-bottom: 1px solid rgb(223, 217, 217) ;opacity: 0.6;font-family:'Proza Libre', sans-serif;font-size: 9px;font-weight: normal; ">
+        <tr class="d-flex justify-content-between">
+          <td style="width: 60%;">PRODUCT</td>
+          <td style="width: 20%;">QUANTITY</td>
+          <td style="width: 10%;">TOTAL</td>
+        </tr>
+      </thead>
+      <tbody class="m-5">
+        @for (product of products; track product.id) {
+        <app-cart-product (deteltedProduct)="getDeletedProduct($event)" [oneProduct]="product"></app-cart-product>
         }
-          
-        </tbody>
-        <br><br>
-        <tfoot style="border-bottom: 1px solid rgb(223, 217, 217) ; " class="m-5">
-         <span></span>
-        </tfoot>
-      </table>
-    </div>
-    <br><br><br>
-    <app-cart-total-price [subtotal]="subtotal"></app-cart-total-price>
-    
-    <br><br><br><br>
+
+      </tbody>
+      <br><br>
+      <tfoot style="border-bottom: 1px solid rgb(223, 217, 217) ; " class="m-5">
+        <span></span>
+      </tfoot>
+    </table>
   </div>
+  <br><br><br>
+  <app-cart-total-price [subtotal]="subtotal"></app-cart-total-price>
+
+  <br><br><br><br>
+</div>
 }
 @else {
-  <app-your-cart-empty></app-your-cart-empty>
+<app-your-cart-empty></app-your-cart-empty>
 }
-

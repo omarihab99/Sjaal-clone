@@ -11,62 +11,64 @@ import { YourCartEmptyComponent } from "../your-cart-empty/your-cart-empty.compo
 import { CartTitleComponent } from "../cart-title/cart-title.component";
 
 @Component({
-    selector: 'app-cart-products',
-    standalone: true,
-    providers: [CartProductsService],
-    templateUrl: './cart-products.component.html',
-    styleUrl: './cart-products.component.css',
-    imports: [CommonModule, HttpClientModule, RouterLink, CustomCurrencyPipe, CartTotalPriceComponent, CartProductComponent, YourCartEmptyComponent, CartTitleComponent]
+  selector: 'app-cart-products',
+  standalone: true,
+  providers: [CartProductsService],
+  templateUrl: './cart-products.component.html',
+  styleUrl: './cart-products.component.css',
+  imports: [CommonModule, HttpClientModule, RouterLink, CustomCurrencyPipe, CartTotalPriceComponent, CartProductComponent, YourCartEmptyComponent, CartTitleComponent]
 })
-export class CartProductsComponent implements OnInit{
+export class CartProductsComponent implements OnInit {
 
 
   products!: CartProduct[];
-  subtotal:number=0;
+  subtotal: number = 0;
 
-  constructor(private productService: CartProductsService) {
-    
-   }
+  constructor(private cartProductService: CartProductsService) {
+
+  }
 
   ngOnInit() {
     this.fetchProducts();
     
-    
   }
-  getDeletedProduct(event:CartProduct){
+  getDeletedProduct(event: CartProduct) {
 
-    this.products = this.products.filter(item =>item !== event);
-    
+    this.products = this.products.filter(item => item !== event);
+
 
   }
 
-  fetchProducts() {
-    this.productService.getProducts()
+   fetchProducts() {
+     this.cartProductService.getProducts()
       .subscribe({
-        next:products => {
-        this.products = products;
-        this.calculateTotal();
-      }});
-      
+        next: products => {
+          this.products = products;
+          console.log(this.products);
+          
+          this.calculateTotal();
+        }
+      });
+
 
   }
   calculateTotal() {
     console.log(this.products);
     if (this.products && this.products.length > 0) {
-      
-        this.subtotal = this.products.reduce((total, product) => {
-            const price = typeof product.price === 'number' ? product.price : 0;
-            const quantity = typeof product.quantity === 'number' ? product.quantity : 0;
-            let sum= total + (price * quantity);
-            console.log(sum);
-            return sum;
-            
-        }, 0);
+
+      this.subtotal = this.products.reduce((total, product) => {
+        const price = typeof product.price === 'number' ? product.price : 0;
+        const quantity = typeof product.quantity === 'number' ? product.quantity : 0;
+        let sum = total + (price * quantity);
+        console.log(sum);
+        return sum;
+
+      }, 0);
     } else {
-      console.log("hello from failed"+this.subtotal)
-        this.subtotal = 0;
+      console.log("hello from failed" + this.subtotal)
+      this.subtotal = 0;
     }
-}
+  }
 
 
 
