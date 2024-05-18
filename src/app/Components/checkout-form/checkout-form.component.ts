@@ -124,7 +124,8 @@ export class CheckoutFormComponent implements OnInit{
   }
 
   completeOrder() {
-    console.log(this.checkoutData);
+    
+    window.alert("Thank you for your order!!")
     
     
    }
