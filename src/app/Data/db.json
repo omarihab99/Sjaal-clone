@@ -868,22 +868,5 @@
     }
   ],
   "cart": [
-    {
-      "id": "3",
-      "collectionId": "1",
-      "name": "Olive Linen Dress",
-      "price": 850,
-      "size": "S/M",
-      "quantity": 2,
-      "image": "/assets/images/oliveLinenDress.webp"
-    },{
-      "id": "3",
-      "collectionId": "1",
-      "name": "Olive Linen Dress",
-      "price": 850,
-      "size": "L/XL",
-      "quantity": 2,
-      "image": "/assets/images/oliveLinenDress.webp"
-    }
   ]
 }
