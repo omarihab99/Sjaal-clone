@@ -868,5 +868,14 @@
     }
   ],
   "cart": [
+    {
+      "id": "10",
+      "collectionId": "3",
+      "name": "Mint Abaya Dress",
+      "price": 700,
+      "size": "S/M",
+      "quantity": 1,
+      "image": "/assets/images/MintAbayaDress.webp"
+    }
   ]
 }
