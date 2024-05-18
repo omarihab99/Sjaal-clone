@@ -1,0 +1,9 @@
+<div class="justify-content-center mt-5">
+    <div class="row categories-container">
+       @for (category of categories; track category.id) {
+           <div class="row-cols-1 cat-section-container">
+               <app-category-section [category]="category"></app-category-section>
+           </div>
+       }
+    </div>
+</div>
