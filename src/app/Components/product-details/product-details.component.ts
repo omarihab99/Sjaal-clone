@@ -21,7 +21,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './product-details.component.css'
 })
 export class ProductDetailsComponent implements OnInit {
-  cartProduct: CartProduct = {};
+  cartProduct: CartProduct = {
+    id: "", collectionId: "", name: "", price: 0,
+    size: '',
+    quantity: 0,
+    image: ''
+  };
   productId: string = ""
   product: Product = {
     id: "",

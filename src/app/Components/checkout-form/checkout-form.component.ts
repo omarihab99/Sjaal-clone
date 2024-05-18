@@ -14,6 +14,26 @@ import { CheckoutDirective } from './Directives/checkout.directive';
   styleUrl: './checkout-form.component.css'
 })
 export class CheckoutFormComponent {
+
+  checkoutData: FormGroup<any> = new FormGroup(
+    {
+      email: new FormControl("",[Validators.required,Validators.email]),
+      notifyMe: new FormControl(false,),
+      country: new FormControl("",[Validators.required]),
+      fName: new FormControl("",[Validators.required]),
+      lName: new FormControl("",[Validators.required]),
+      address: new FormControl("",[Validators.required]),
+      apartment: new FormControl("",[Validators.required]),
+      city: new FormControl("",[Validators.required]),
+      governorate: new FormControl("",[Validators.required]),
+      pCode: new FormControl(null,[Validators.required]),
+      phone: new FormControl(null,[Validators.required, Validators.min(11), Validators.max(11)]),
+      nextTime: new FormControl(false,[Validators.required]),
+      shippingCity: new FormControl([Validators.required]),
+      sameAddress: new FormControl("",[Validators.required]),
+      
+    }
+  );
   constructor(){}
 
   selectionArr:{value:String,option:String}[]=[
@@ -51,7 +71,8 @@ export class CheckoutFormComponent {
   ];
 
   shippingMethodArr:{value:String,id:String,price:number}[]=[
-      {value:"Cairo & Giza",id:"",price:50},
+
+      {value:"Cairo & Giza",id:"exampleRadios",price:50},
       {value:"Alexandria",id:"exampleRadios1",price:55},
       {value:"Behira",id:"exampleRadios2",price:55},
       {value:"Sahel",id:"exampleRadios3",price:55},
@@ -85,4 +106,11 @@ export class CheckoutFormComponent {
     let input = target.querySelector('input');
     input!.checked = true;
   }
+
+  completeOrder() {
+    console.log(this.checkoutData);
+    console.log(this.checkoutData.get('shippingCity')?.value);
+    
+    
+   }
 }
