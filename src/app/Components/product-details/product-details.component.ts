@@ -135,4 +135,16 @@ export class ProductDetailsComponent implements OnInit {
     })
 
   }
+
+  buyItNow(){
+    this.cartService.addToCart(this.cartProduct).subscribe({
+      next: (data) => {
+        this.cartService.addToCartCount(1);
+      },
+      error: (err: any) => {
+        console.log(err);
+        window.alert("something went wrong")
+      }
+    });
+  }
 }

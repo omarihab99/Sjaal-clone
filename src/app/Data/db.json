@@ -892,8 +892,17 @@
       "name": "Black Buttoned Linen Set",
       "price": 1000,
       "size": "S/M",
-      "quantity": 2,
+      "quantity": 3,
       "image": "/assets/images/BlackButtonedLinenSet.webp"
+    },
+    {
+      "id": "",
+      "collectionId": "",
+      "name": "",
+      "price": 0,
+      "size": "",
+      "quantity": 0,
+      "image": ""
     }
   ]
 }
