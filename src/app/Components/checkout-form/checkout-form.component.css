@@ -1,0 +1,33 @@
+input:focus{
+    border-color: #1773b0;
+    border-width: 2px;
+    box-shadow: none;
+}
+
+input:checked{
+    background-color:  #1773b0;
+}
+
+select:focus{
+    border-color: #1773b0;
+    border-width: 2px;
+    box-shadow: none;
+}
+
+input,select{
+    width: 95%;
+    height: 50px;
+}
+
+.nameInput{
+    width: 47%;
+}
+
+#ShippingMethod,#BillingAddress,#BillingAddress2{
+    border: 1px rgb(241, 237, 237) solid;
+    padding: 15px;
+    width: 96%;
+    height: 55px;
+    margin-left: 1px;
+    border-radius: 5px;
+}

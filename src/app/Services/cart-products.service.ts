@@ -9,6 +9,7 @@ export class CartProductsService {
 
   
   private baseUrl = 'http://localhost:3000/cart';
+  
 
   constructor(private http: HttpClient) { }
 
@@ -32,5 +33,6 @@ export class CartProductsService {
   removeFromCart(productId: any){
     return this.http.delete(`${this.baseUrl}/${productId}`);
   }
+
 
 }
