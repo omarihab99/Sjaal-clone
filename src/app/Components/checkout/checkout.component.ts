@@ -10,5 +10,11 @@ import { CheckoutFormComponent } from '../checkout-form/checkout-form.component'
   styleUrl: './checkout.component.css'
 })
 export class CheckoutComponent {
+  shippingPrice:number=0
+  handleShippingPriceChange(price:any) {
+    this.shippingPrice = price;
+    console.log(this.shippingPrice);
+    
+  }
 
 }

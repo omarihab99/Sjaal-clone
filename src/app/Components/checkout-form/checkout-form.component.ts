@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ProductsService } from '../../Services/products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -13,7 +13,8 @@ import { CheckoutDirective } from './Directives/checkout.directive';
   templateUrl: './checkout-form.component.html',
   styleUrl: './checkout-form.component.css'
 })
-export class CheckoutFormComponent {
+export class CheckoutFormComponent implements OnInit{
+  @Output() shippingPrice = new EventEmitter<number|undefined>();
 
   checkoutData: FormGroup<any> = new FormGroup(
     {
@@ -29,12 +30,22 @@ export class CheckoutFormComponent {
       pCode: new FormControl(null,[Validators.required]),
       phone: new FormControl(null,[Validators.required, Validators.min(11), Validators.max(11)]),
       nextTime: new FormControl(false,[Validators.required]),
-      shippingCity: new FormControl([Validators.required]),
+      shippingCity: new FormControl('',[Validators.required]),
       sameAddress: new FormControl("",[Validators.required]),
       
     }
   );
+
   constructor(){}
+
+  ngOnInit(): void {
+   this.checkoutData.get('shippingCity')?.valueChanges.subscribe(value => {
+      this.shippingPrice.emit(this.getPriceForCity(value));
+      console.log(this.shippingPrice);
+      
+      
+    });
+  }
 
   selectionArr:{value:String,option:String}[]=[
     {value:"SU",option:"6th of October"},
@@ -101,6 +112,11 @@ export class CheckoutFormComponent {
       {value:"North Sinai",id:"exampleRadios26",price:90},
       {value:"South Sinai",id:"exampleRadios27",price:90},
   ]
+
+  getPriceForCity(city: string): number|undefined {
+    const shippingMethod = this.shippingMethodArr.find(method => method.value === city);
+    return shippingMethod?.price;
+  }
   click(e: Event){
     let target = e.currentTarget as HTMLInputElement;
     let input = target.querySelector('input');
@@ -109,7 +125,6 @@ export class CheckoutFormComponent {
 
   completeOrder() {
     console.log(this.checkoutData);
-    console.log(this.checkoutData.get('shippingCity')?.value);
     
     
    }

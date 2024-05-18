@@ -1,5 +1,5 @@
-<div class="d-flex" >
-    <app-checkout-form  style="width: 100%; margin-left: 10%;"></app-checkout-form>
-    <app-checkout-products ></app-checkout-products>
+<div class="d-flex checkout" >
+    <app-checkout-form  style="width: 100%;" (shippingPrice)="handleShippingPriceChange($event)"></app-checkout-form>
+    <app-checkout-products [shippingPrice]="shippingPrice"></app-checkout-products>
 </div>
 
