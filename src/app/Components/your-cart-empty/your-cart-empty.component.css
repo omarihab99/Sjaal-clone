@@ -1,0 +1,15 @@
+.button{
+    background-color: rgba(207,192,174,1);
+
+    /* justify-content: center;
+    align-items: center; */
+    border: 0;
+    padding: 0 3rem;
+    appearance: none;
+    text-decoration: none;
+    /* position: absolute; */
+    /* left: 10%; */
+
+  
+
+  }

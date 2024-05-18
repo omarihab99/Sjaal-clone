@@ -10,7 +10,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
 import { RecommendationComponent } from '../recommendation/recommendation.component';
 import { ProductsService } from '../../Services/products.service';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
-
+import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-product-details',
@@ -39,22 +39,22 @@ export class ProductDetailsComponent implements OnInit {
     images: []
   }
 
-  clickedImage: any=""
+  clickedImage: any = ""
   desiredQuantity = signal(1);
   choosenSize: string = this.product.availableSizes[0]
   cartProducts: CartProduct[] = []
-  collectionId:string = "" 
+  collectionId: string = ""
 
-  constructor(private cartService: CartService, private productsService: ProductsService, private activeLink: ActivatedRoute) { 
+  constructor(private cartService: CartService, private productsService: ProductsService, private activeLink: ActivatedRoute, private router: Router) {
   }
-  
 
-  
+
+
   ngOnInit(): void {
     this.productId = this.activeLink.snapshot.url[1].path;
 
     this.productsService.getProductById(this.productId).subscribe({
-    
+
 
       next: (data: Product) => {
         this.product = data;
@@ -62,7 +62,7 @@ export class ProductDetailsComponent implements OnInit {
         this.choosenSize = this.product.availableSizes[0];
 
       },
-      error: (err:any) => {
+      error: (err: any) => {
         console.log(err)
 
       },
@@ -100,11 +100,8 @@ export class ProductDetailsComponent implements OnInit {
     this.cartService.getCartProducts().subscribe({
 
       next: (data: any) => {
-
         this.cartProducts = data;
-
         let neededProduct: CartProduct | any = this.cartProducts.find(product => product.id === this.cartProduct.id);
-
         if (neededProduct && neededProduct.size == this.cartProduct.size) {
           console.log("in update");
           this.cartProduct.quantity = this.cartProduct.quantity + neededProduct.quantity;
@@ -115,29 +112,22 @@ export class ProductDetailsComponent implements OnInit {
             error: (err: any) => {
               console.log(err);
               window.alert("something went wrong")
-
             }
           })
-
         }
         else {
           console.log("in add");
           console.log(this.cartProduct);
-
-
           this.cartService.addToCart(this.cartProduct).subscribe({
             next: (data) => {
-
-
-
             },
             error: (err: any) => {
               console.log(err);
               window.alert("something went wrong")
-
             }
           })
         }
+        this.router.navigate(['/cart']);
       },
       error: (err) => {
         console.log(err);
