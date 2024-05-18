@@ -869,13 +869,22 @@
   ],
   "cart": [
     {
-      "id": "3",
-      "collectionId": "1",
-      "name": "Olive Linen Dress",
-      "price": 850,
+      "id": "7",
+      "collectionId": "2",
+      "name": "Cream Buttoned Linen Set",
+      "price": 1000,
       "size": "S/M",
       "quantity": 2,
-      "image": "/assets/images/oliveLinenDress.webp"
+      "image": "/assets/images/CreamButtonedLinenSet.webp"
+    },
+    {
+      "id": "6",
+      "collectionId": "2",
+      "name": "Black Buttoned Linen Set",
+      "price": 1000,
+      "size": "S/M",
+      "quantity": 1,
+      "image": "/assets/images/BlackButtonedLinenSet.webp"
     }
   ]
 }
