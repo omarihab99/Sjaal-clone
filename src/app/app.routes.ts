@@ -9,6 +9,7 @@ import { ExploreComponent } from './Components/explore/explore.component';
 
 import { CartComponent } from './Components/cart/cart.component';
 import { ProductsPageComponent } from './Components/products-page/products-page.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
 export const routes: Routes = [
     { path: "" ,component: HomeComponent, pathMatch: "full" },
     { path: "collections/:collectionId", component: ProductsPageComponent },
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path:"feedback", component:FeedbackComponent},
     {path:"product/:id", component:ProductDetailsComponent},
     {path: "cart", component: CartComponent},
+    {path:"checkout", component:CheckoutComponent}
 ];
 
