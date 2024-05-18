@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
 import { CartProduct } from '../Models/cart-product.model';
 
 @Injectable({
@@ -31,7 +31,12 @@ export class CartService {
   removeFromCartCount(val:number){
     this.cartCountSubject.next(this.cartCountSubject.value-val > 0 ? this.cartCountSubject.value-val : 0);
   }
-  clearCart(){
-    this.cartCountSubject.next(0);
+  clearCart(): void {
+    this.getCartProducts().subscribe(cartProducts => {
+      const deleteRequests = cartProducts.map(product => this.http.delete(`${this.URL}/${product.id}`));
+      forkJoin(deleteRequests).subscribe(() => {
+        this.cartCountSubject.next(0);
+      });
+    });
   }
 }

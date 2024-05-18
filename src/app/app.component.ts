@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { MainsectionComponent } from './Components/mainsection/mainsection.component';
@@ -32,6 +32,13 @@ import { CartService } from './Services/cart.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private cartService: CartService) { }
+ 
+  ngOnInit(): void {
+    this.cartService.clearCart();
+  }
   title = 'sjaal';
+ 
 }
+ 
