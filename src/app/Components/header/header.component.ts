@@ -22,6 +22,15 @@ export class HeaderComponent implements OnChanges {
   constructor(private cartService: CartService){
     
   }
+
+  ngOnInit(): void {
+    console.log("in the header on init");
+    
+    this.cartService.getCartProducts()
+    .subscribe(res=>{
+      this.cartCount = res.length;
+    })
+  }
   ngOnChanges() : void{
     // this.cartService.getCartProducts().subscribe({
     //   next: (cartProducts) => {

@@ -868,14 +868,5 @@
     }
   ],
   "cart": [
-    {
-      "id": "6",
-      "collectionId": "2",
-      "name": "Black Buttoned Linen Set",
-      "price": 1000,
-      "size": "S/M",
-      "quantity": 1,
-      "image": "/assets/images/BlackButtonedLinenSet.webp"
-    }
   ]
 }
