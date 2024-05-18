@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { CartProduct } from '../Models/cart-product.model';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,18 +10,43 @@ import { CartProduct } from '../Models/cart-product.model';
 export class CartService {
 
   URL = "http://localhost:3000/cart";
-  constructor(private http: HttpClient) { }
+  private cartCountSubject = new BehaviorSubject<number>(0);
 
-  addToCart(cartProduct:CartProduct) : Observable<CartProduct>{
-    return this.http.post(this.URL, cartProduct) as Observable<CartProduct>;
+  constructor(private http: HttpClient) { 
+    this.initializeCartCount();
   }
 
-  updateProduct(cartProduct:CartProduct) : Observable<CartProduct>{
-    return this.http.put(`${this.URL}/${cartProduct.id}`, cartProduct) as Observable<CartProduct>;
+  private initializeCartCount(): void {
+    this.getCartProducts().subscribe((cartProducts: CartProduct[]) => {
+      this.cartCountSubject.next(cartProducts.length);
+    });
   }
 
-  getCartProducts() : Observable<CartProduct[]> { 
-    return this.http.get(this.URL) as Observable<CartProduct[]>;
+  addToCart(cartProduct: CartProduct): Observable<CartProduct> {
+    return this.http.post<CartProduct>(this.URL, cartProduct).pipe(
+      tap(() => {
+        this.cartCountSubject.next(this.cartCountSubject.value + 1);
+      })
+    );
   }
 
+  get getCartNumber$(): Observable<number> {
+    return this.cartCountSubject.asObservable();
+  }
+
+  updateProduct(cartProduct: CartProduct): Observable<CartProduct> {
+    return this.http.put<CartProduct>(`${this.URL}/${cartProduct.id}`, cartProduct);
+  }
+
+  getCartProducts(): Observable<CartProduct[]> {
+    return this.http.get<CartProduct[]>(this.URL);
+  }
+
+  removeFromCart(productId: any): Observable<any> {
+    return this.http.delete(`${this.URL}/${productId}`).pipe(
+      tap(() => {
+        this.cartCountSubject.next(this.cartCountSubject.value - 1);
+      })
+    );
+  }
 }

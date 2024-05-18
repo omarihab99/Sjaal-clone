@@ -4,6 +4,7 @@ import { CustomCurrencyPipe } from "../../Pipes/custom-currency.pipe";
 import { HttpClientModule } from '@angular/common/http';
 import { CartProductsService } from '../../Services/cart-products.service';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../Services/cart.service';
 
 @Component({
     selector: 'app-cart-product',
@@ -11,13 +12,13 @@ import { CommonModule } from '@angular/common';
     templateUrl: './cart-product.component.html',
     styleUrl: './cart-product.component.css',
     imports: [CustomCurrencyPipe,HttpClientModule,CommonModule],
-    providers:[CartProductsService]
+    providers:[CartProductsService , CartService]
 })
 export class CartProductComponent {
 @Input() oneProduct!:CartProduct
 appear:boolean=true;
 
-constructor(private cartProductService: CartProductsService) { }
+constructor(private cartProductService: CartProductsService , private cartService :CartService) { }
   @Output() deteltedProduct = new EventEmitter<CartProduct>()
   ngOnInit(): void {
  
@@ -35,10 +36,16 @@ constructor(private cartProductService: CartProductsService) { }
     });
   }
   removeFromCart(productId: any) {
-    this.cartProductService.removeFromCart(productId).subscribe(
+    this.cartService.removeFromCart(productId).subscribe(
       
       {
         next:()=>{
+          
+          let cartLength = +(JSON.parse(localStorage.getItem('cartLength')!))
+          console.log(cartLength);
+
+          localStorage.setItem("cartLength" , JSON.stringify(cartLength - 1))
+
           this.appear=false;
           this.deteltedProduct.emit(this.oneProduct);
         }

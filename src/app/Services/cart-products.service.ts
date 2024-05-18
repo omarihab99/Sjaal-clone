@@ -30,9 +30,7 @@ export class CartProductsService {
     }
     return this.http.put<CartProduct>(url, product);
   }
-  removeFromCart(productId: any){
-    return this.http.delete(`${this.baseUrl}/${productId}`);
-  }
+  
 
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, signal } from '@angular/core';
+import { Component, EventEmitter, OnChanges, OnInit, SimpleChanges, signal  , Output} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Product } from '../../Models/product.model';
 import { CartService } from '../../Services/cart.service';
@@ -22,7 +22,9 @@ import { RouterModule } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
   cartProduct: CartProduct = {};
-  productId: string = ""
+  productId: string = "";
+  @Output() cartLengthEvent = new EventEmitter();
+
   product: Product = {
     id: "",
     collectionId: "",
@@ -121,6 +123,8 @@ export class ProductDetailsComponent implements OnInit {
               window.alert("something went wrong")
             }
           })
+          this.cartLengthEvent.emit(this.cartProducts.length + 1 );
+          localStorage.setItem("cartLength" , JSON.stringify(this.cartProducts.length + 1))
         }
         this.router.navigate(['/cart']);
       },

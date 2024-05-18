@@ -869,13 +869,31 @@
   ],
   "cart": [
     {
-      "id": "10",
-      "collectionId": "3",
-      "name": "Mint Abaya Dress",
-      "price": 700,
+      "id": "4",
+      "collectionId": "1",
+      "name": "Cashmere Linen Dress",
+      "price": 850,
       "size": "S/M",
       "quantity": 1,
-      "image": "/assets/images/MintAbayaDress.webp"
+      "image": "/assets/images/CashmereLinenDress.webp"
+    },
+    {
+      "id": "1",
+      "collectionId": "1",
+      "name": "Black Linen Dress",
+      "price": 850,
+      "size": "S/M",
+      "quantity": 1,
+      "image": "/assets/images/BlackLinenDress.webp"
+    },
+    {
+      "id": "17",
+      "collectionId": "5",
+      "name": "Black Grace",
+      "price": 250,
+      "size": "S/M",
+      "quantity": 1,
+      "image": "/assets/images/BlackGrace.webp"
     }
   ]
 }

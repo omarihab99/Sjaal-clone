@@ -3,6 +3,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CartService } from '../../Services/cart.service';
 import { RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -17,21 +18,22 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent implements OnChanges {
   
-  cartCount = 0 ;
+  cartCount!: number;
+  private cartCountSubscription!: Subscription;
+
+
   offcanvasNavbarId  = "offcanvasNavbar";
   constructor(private cartService: CartService){
     
   }
 
   ngOnInit(): void {
-    console.log("in the header on init");
-    
-    this.cartService.getCartProducts()
-    .subscribe(res=>{
-      this.cartCount = res.length;
-    })
+    this.cartCountSubscription = this.cartService.getCartNumber$.subscribe(count => {
+      this.cartCount = count;
+    });
   }
   ngOnChanges() : void{
+    this.cartCount = +(JSON.parse(localStorage.getItem('cartLength')!))
     // this.cartService.getCartProducts().subscribe({
     //   next: (cartProducts) => {
     //     this.cartCount = cartProducts.length;

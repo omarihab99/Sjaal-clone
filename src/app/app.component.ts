@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { MainsectionComponent } from './Components/mainsection/mainsection.component';
@@ -33,4 +33,6 @@ import { CheckoutFormComponent } from './Components/checkout-form/checkout-form.
 })
 export class AppComponent {
   title = 'sjaal';
+  @Input() DataFromParent = "";
+  
 }
