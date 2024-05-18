@@ -8,7 +8,7 @@ import { CustomCurrencyPipe } from '../../Pipes/custom-currency.pipe';
   selector: 'app-checkout-products',
   standalone: true,
   imports: [HttpClientModule, CustomCurrencyPipe],
-  providers:[CartService],
+  providers:[],
   templateUrl: './checkout-products.component.html',
   styleUrl: './checkout-products.component.css'
 })

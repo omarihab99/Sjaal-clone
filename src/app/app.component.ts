@@ -13,7 +13,7 @@ import { CartComponent } from './Components/cart/cart.component';
 import { CartProductsComponent } from './Components/cart-products/cart-products.component';
 import { CheckoutFormComponent } from './Components/checkout-form/checkout-form.component';
 // import { CheckoutFormComponent } from './Components/checkout-form/checkout-form.component';
-
+import { CartService } from './Services/cart.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -28,6 +28,7 @@ import { CheckoutFormComponent } from './Components/checkout-form/checkout-form.
     CheckoutFormComponent,
     FooterComponent, HeaderComponent, CartComponent, CartProductsComponent, ProductDetailsComponent, ProductsPageComponent
   ],
+  providers: [CartService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

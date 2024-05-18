@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-product-details',
   standalone: true,
   imports: [FormsModule, HttpClientModule, CustomCurrencyPipe, CommonModule, RecommendationComponent, ProductCardComponent, RouterModule],
-  providers: [CartService, ProductsService],
+  providers: [ProductsService],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
@@ -107,7 +107,6 @@ export class ProductDetailsComponent implements OnInit {
           this.cartProduct.quantity = this.cartProduct.quantity + neededProduct.quantity;
           this.cartService.updateProduct(this.cartProduct).subscribe({
             next: (data) => {
-
             },
             error: (err: any) => {
               console.log(err);
@@ -120,6 +119,7 @@ export class ProductDetailsComponent implements OnInit {
           console.log(this.cartProduct);
           this.cartService.addToCart(this.cartProduct).subscribe({
             next: (data) => {
+              this.cartService.addToCartCount(1);
             },
             error: (err: any) => {
               console.log(err);

@@ -1,7 +1,8 @@
 <div class="container">
         <div class="card" style="width: 18rem;border-radius: 0%;border: none;width: 305px;">
                 <!-- img hover -->
-                <a href="product/{{product.id}}">
+                <a routerLink="/product/{{product.id}}" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}" >
                         <div [appProduct]="{orgImg:product.images[0],hoverImg:product.images[1]}" id="productImg"
                                 class="card-img-top img-fluid" alt="Product image"
                                 style="background-image: url('{{product.images[0]}}');height: 350px;border-radius: 0%;">
@@ -17,7 +18,8 @@
                         <!-- currency pipe -->
                         <p class="card-text">{{product.price |customCurrency:'EGP'}}</p>
                         @if (buttonAppear) {
-                        <a href="product/{{product.id}}"
+                        <a routerLink="/product/{{product.id}}" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}" 
                                 style="width: 100%;border-radius: 0%;font-size: 1.5 rem;font-weight: 400;"
                                 class="btn btn-outline-dark">choose options</a>
                         }

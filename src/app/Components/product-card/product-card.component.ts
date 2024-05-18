@@ -6,12 +6,12 @@ import { CustomCurrencyPipe } from '../../Pipes/custom-currency.pipe';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductsService } from '../../Services/products.service';
 import { ProductDirective } from './Directives/product.directive';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CustomCurrencyPipe, RouterLink, CurrencyPipe,HttpClientModule,ProductDirective],
+  imports: [CustomCurrencyPipe, RouterLink, CurrencyPipe,HttpClientModule,ProductDirective, RouterModule],
   providers:[ProductsService],
   templateUrl: './product-card.component.html',
   styleUrls:['./product-card.component.css'],

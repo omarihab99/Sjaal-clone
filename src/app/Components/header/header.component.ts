@@ -1,8 +1,9 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CartService } from '../../Services/cart.service';
 import { RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -11,32 +12,26 @@ import { RouterModule } from '@angular/router';
     SidebarComponent,
     RouterModule
   ],
-  providers: [CartService],
+  providers: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnChanges {
+export class HeaderComponent implements OnInit {
   
-  cartCount = 0 ;
+  cartCount! : number ;
   offcanvasNavbarId  = "offcanvasNavbar";
+  private cartCountSubscription!: Subscription;
   constructor(private cartService: CartService){
     
   }
 
   ngOnInit(): void {
-    console.log("in the header on init");
-    
-    this.cartService.getCartProducts()
-    .subscribe(res=>{
-      this.cartCount = res.length;
+    this.cartCountSubscription = this.cartService.cartNumber.subscribe({
+      next: (cartCount : number) => {
+        console.log("New cart count: " + cartCount);
+        
+        this.cartCount = cartCount;
+      }
     })
   }
-  ngOnChanges() : void{
-    // this.cartService.getCartProducts().subscribe({
-    //   next: (cartProducts) => {
-    //     this.cartCount = cartProducts.length;
-    //   }
-    // });
-  }
-  //TODO: Add Cart Count from product-details component.
 }

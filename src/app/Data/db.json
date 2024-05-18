@@ -869,13 +869,13 @@
   ],
   "cart": [
     {
-      "id": "10",
+      "id": "12",
       "collectionId": "3",
-      "name": "Mint Abaya Dress",
+      "name": "Blush Abaya Dress",
       "price": 700,
       "size": "S/M",
       "quantity": 1,
-      "image": "/assets/images/MintAbayaDress.webp"
+      "image": "/assets/images/BlushAbayaDress.webp"
     }
   ]
 }
