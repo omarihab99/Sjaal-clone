@@ -4,12 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { CheckoutDirective } from './Directives/checkout.directive';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-checkout-form',
   standalone: true,
-  imports: [HttpClientModule,FormsModule,ReactiveFormsModule,CommonModule,CurrencyPipe,CheckoutDirective],
-  providers:[],
+  imports: [HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule, CurrencyPipe, CheckoutDirective,RouterModule],
+  providers: [],
   templateUrl: './checkout-form.component.html',
   styleUrl: './checkout-form.component.css'
 })
